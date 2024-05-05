@@ -4,7 +4,7 @@
     fill: #161616;
     }
     @media (prefers-color-scheme: dark) {
-    path { fill: #FFF9F4; }
+    path { fill: #ff9780; }
     }
   </style>
   <path fill-rule="evenodd" clip-rule="evenodd"

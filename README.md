@@ -1,7 +1,6 @@
-# Handshake docs
+# Handshake Site
 
-Landing page and documentation for Handshake. We recommend deleting this folder
-from your Handshake instance.
+Landing page and documentation for Handshake.
 
 ## Development
 
