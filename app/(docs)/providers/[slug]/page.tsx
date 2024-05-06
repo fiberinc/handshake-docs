@@ -2,10 +2,9 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { constructMetadata } from '~/lib/construct-metadata';
 import { getProvider, getProviders } from '~/lib/providers';
+import { DocPageMain } from '~/ui/DocPageMain';
 import { makeSerializeOptions } from '~/ui/mdx/serialize-options';
 import { Main } from './Main';
-import { TableOfContents } from './TableOfContents';
-import { DocPageMain } from '~/ui/DocPageMain';
 
 interface Props {
 	params: {
@@ -20,12 +19,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 		throw Error(`Can't fetch metadata for post ${params.slug}`);
 	}
 
-	// optionally access and extend (rather than replace) parent metadata
-	// const previousImages = (await parent).openGraph?.images || []
 	return constructMetadata({
-		// title: `${post.title} – Handshake Blog`,
-		title: `Implement ${provider.title} OAuth in 5 minutes`,
-		description: `How to handle ${provider.title} OAuth in 5 minutes.`,
+		title: `Implement ${provider.title} OAuth in 5 minutes - Handshake`,
+		description: `Obtain access tokens to ${provider.title} accounts with Handshake.`,
 
 		// description: post.subtitle,
 		// image: post.imageUrl,
@@ -48,9 +44,9 @@ export default async function Page({ params }: Props) {
 						slug: 'setup',
 						title: 'Provider setup',
 					},
-					provider.troubleshoot && {
-						slug: 'troubleshoot',
-						title: 'Troubleshoot',
+					{
+						slug: 'troubleshooting',
+						title: 'Troubleshooting',
 					},
 				].filter(Boolean) as any[]
 			}

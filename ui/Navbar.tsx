@@ -1,12 +1,11 @@
 'use client';
 
-import { Text } from '~/ui/Text';
 import { GitHubLogoIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { PiHandshakeDuotone } from 'react-icons/pi';
-import { twMerge } from 'tailwind-merge';
 import { REPO_URL, ROUTES } from '~/lib/routes';
+import { Text } from '~/ui/Text';
 import { NavThemeToggle } from './NavbarThemeToggle';
 
 export function Navbar() {
@@ -25,15 +24,10 @@ export function Navbar() {
 					</h1>
 				</Link>
 				<div className="flex flex-row gap-6 items-center">
-					<NavThemeToggle />
 					{pathname === '/' && (
-						<Link
-							href={ROUTES.basics}
-							className={twMerge('text-contrast underline-offset-4 underline')}
-						>
-							Docs
-						</Link>
+						<Link href={ROUTES.basics}>Read documentation</Link>
 					)}
+					<NavThemeToggle />
 					<a
 						href={REPO_URL}
 						target="_blank"

@@ -1,7 +1,7 @@
-import { Metadata } from 'next';
 import Link from 'next/link';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { twMerge } from 'tailwind-merge';
+import { constructMetadata } from '~/lib/construct-metadata';
 import { getProviders } from '~/lib/providers';
 import { REPO_URL } from '~/lib/routes';
 import { Banner } from '~/ui/Banner';
@@ -11,9 +11,7 @@ import { Text } from '~/ui/Text';
 import { WistiaPlayer } from '~/ui/WistiaPlayer';
 import { ProviderGrid } from './ProviderGrid';
 
-export const metadata: Metadata = {
-	title: 'Handshake – OAuth made easy',
-};
+export const metadata = constructMetadata({});
 
 const BUTTON_CLS = 'flex h-[55px] flex-row items-center gap-3 font-medium';
 

@@ -1,7 +1,7 @@
 import { serialize } from 'next-mdx-remote/serialize';
 import Link from 'next/link';
 import { Provider } from '~/lib/providers';
-import { ROUTES } from '~/lib/routes';
+import { REPO_URL, ROUTES } from '~/lib/routes';
 import { MdxRenderInline } from '~/ui/mdx/MdxRender';
 import { makeSerializeOptions } from '~/ui/mdx/serialize-options';
 import { Header } from './Header';
@@ -40,11 +40,11 @@ export async function Main({ provider }: Props) {
 						<code>
 							{provider.objectName}({})
 						</code>{' '}
-						factory. (See <Link href="#usage">Usage</Link>.)
+						factory. (See <Link href="#usage">Usage</Link> below.)
 					</p>
 					<p>
 						Handshake will take the user through the {provider.title} OAuth flow
-						and redirect them back to you what the URL you pass to the{' '}
+						and redirect them back to the URL specified by the{' '}
 						<code>callback_uri</code> query parameter.
 					</p>
 					<MdxRenderInline
@@ -61,9 +61,8 @@ export async function Main({ provider }: Props) {
 					</h1>
 
 					<p>
-						To use {provider.title}, add the{' '}
-						<code>{provider.objectName}()</code> handler to your{' '}
-						<code>app/options.ts</code> file like so:
+						Modify your <code>app/options.ts</code> file to include the{' '}
+						<code>{provider.objectName}()</code> handler like so:
 					</p>
 					<MdxRenderInline
 						{...await serialize(
@@ -97,26 +96,37 @@ export async function Main({ provider }: Props) {
 					</>
 				)}
 
-				{provider.troubleshoot && (
-					<>
-						<Divider />
-						<section className="prose block markdown dark:prose-invert">
-							<h1 id="troubleshoot">
-								<Link href="#troubleshoot" className="text-inherit">
-									Troubleshooting
-								</Link>
-							</h1>
+				<>
+					<Divider />
+					<section className="prose block markdown dark:prose-invert">
+						<h1 id="troubleshooting">
+							<Link href="#troubleshooting" className="text-inherit">
+								Troubleshooting
+							</Link>
+						</h1>
 
-							<p>Common problems to keep in mind:</p>
+						{provider.troubleshoot && (
 							<MdxRenderInline
 								{...await serialize(
 									provider.troubleshoot || '',
 									makeSerializeOptions()
 								)}
 							/>
-						</section>
-					</>
-				)}
+						)}
+
+						<p>
+							Having an issue{' '}
+							{provider.troubleshoot
+								? 'not included here'
+								: `making ${provider.title} work`}
+							? Open{' '}
+							<a href={REPO_URL + '/issues'} target="_blank">
+								an issue in our Github repo
+							</a>{' '}
+							to get help from our team.
+						</p>
+					</section>
+				</>
 			</div>
 		</div>
 	);

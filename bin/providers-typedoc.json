@@ -19270,9 +19270,9 @@
 			"sources": [
 				{
 					"fileName": "providers/shopify.ts",
-					"line": 108,
+					"line": 111,
 					"character": 13,
-					"url": "https://github.com/fiberinc/handshake/blob/main/handshake/src/providers/shopify.ts#L108"
+					"url": "https://github.com/fiberinc/handshake/blob/main/handshake/src/providers/shopify.ts#L111"
 				}
 			],
 			"signatures": [
@@ -19344,7 +19344,7 @@
 									},
 									{
 										"kind": "text",
-										"text": " handler come\nfrom your Shopify app.\n\nOur team at Fiber has written [an in-depth tutorial on how authentication\nworks in the Shopify ecosystem](https://fiber.dev/blog/shopify-oauth-guide).\n\nOnce you have an app, make sure to do the following:\n\n## Configure the Callback URL\n\nMake sure your Handshake URL is allowed within your Shopify app's\nConfiguration tab:\n\n![](DOC_IMAGES/shopify-redirect.png)\n\nFollow the format: "
+										"text": " handler come\nfrom your Shopify app.\n\n![Find client ID and secret in the admin of your Shopify app.](DOC_IMAGES/shopify/app-keys.png)\n\nOur team at Fiber has written [an in-depth tutorial on how authentication\nworks in the Shopify ecosystem](https://fiber.dev/blog/shopify-oauth-guide).\n\nOnce you have an app, make sure to do the following:\n\n## Configure the Callback URL\n\nMake sure your Handshake URL is allowed within your Shopify app's\nConfiguration tab:\n\n![](DOC_IMAGES/shopify/app-redirect.png)\n\n\nFollow the format: "
 									},
 									{
 										"kind": "code",
@@ -19357,9 +19357,9 @@
 					"sources": [
 						{
 							"fileName": "providers/shopify.ts",
-							"line": 108,
+							"line": 111,
 							"character": 13,
-							"url": "https://github.com/fiberinc/handshake/blob/main/handshake/src/providers/shopify.ts#L108"
+							"url": "https://github.com/fiberinc/handshake/blob/main/handshake/src/providers/shopify.ts#L111"
 						}
 					],
 					"parameters": [
