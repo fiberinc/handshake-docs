@@ -22,21 +22,4 @@ export function ProviderLogo({
 			{...props}
 		/>
 	);
-
-	return (
-		<div className="w-fit [&_div]:w-4 [&_div]:h-4">
-			<div
-				style={{
-					// WebkitMaskImage: `url('/images/logos/${id}.svg')`,
-					backgroundImage: `url('/images/logos/${id}.svg')`,
-					backgroundRepeat: 'no-repeat',
-					// maskImage: `url('/images/logos/${id}.svg')`,
-					// backgroundColor: 'white',
-					maskRepeat: 'no-repeat',
-				}}
-				{...props}
-			/>
-		</div>
-		//  src={`/images/logos/${id}.svg`} alt={`Logo for ${id}`} {...props} />
-	);
 }
