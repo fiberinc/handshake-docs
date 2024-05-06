@@ -38,7 +38,7 @@ export default async function Page({ params }: Props) {
 		<DocPageMain
 			toc={
 				[
-					{ slug: 'configuration', title: 'Configuration' },
+					{ slug: 'how-it-works', title: 'How it works' },
 					{ slug: 'usage', title: 'Usage' },
 					provider.setup && {
 						slug: 'setup',

@@ -19270,9 +19270,9 @@
 			"sources": [
 				{
 					"fileName": "providers/shopify.ts",
-					"line": 111,
+					"line": 124,
 					"character": 13,
-					"url": "https://github.com/fiberinc/handshake/blob/main/handshake/src/providers/shopify.ts#L111"
+					"url": "https://github.com/fiberinc/handshake/blob/main/handshake/src/providers/shopify.ts#L124"
 				}
 			],
 			"signatures": [
@@ -19344,11 +19344,20 @@
 									},
 									{
 										"kind": "text",
-										"text": " handler come\nfrom your Shopify app.\n\n![Find client ID and secret in the admin of your Shopify app.](DOC_IMAGES/shopify/app-keys.png)\n\nOur team at Fiber has written [an in-depth tutorial on how authentication\nworks in the Shopify ecosystem](https://fiber.dev/blog/shopify-oauth-guide).\n\nOnce you have an app, make sure to do the following:\n\n## Configure the Callback URL\n\nMake sure your Handshake URL is allowed within your Shopify app's\nConfiguration tab:\n\n![](DOC_IMAGES/shopify/app-redirect.png)\n\n\nFollow the format: "
+										"text": " handler come\nfrom your Shopify app.\n\n## 1. Create a Shopify app\n\nYou must have a Shopify app to take users through the OAuth flow. Check out this [in-depth tutorial on how authentication works in the\nShopify ecosystem](https://fiber.dev/blog/shopify-oauth-guide).\n\nWithin your app, you'll find the client ID and secret:\n\n![Find client ID and secret in the admin of your Shopify\napp.](DOC_IMAGES/shopify/app-keys.png)\n\n## 2. Configure the Callback URL\n\nMake sure your Handshake URL is allowed within your Shopify app's\nConfiguration tab:\n\n![](DOC_IMAGES/shopify/app-redirect.png)\n\nFollow the format: "
 									},
 									{
 										"kind": "code",
 										"text": "`https://HANDSHAKE_URL/auth/shopify/callback`"
+									}
+								]
+							},
+							{
+								"tag": "@troubleshoot",
+								"content": [
+									{
+										"kind": "text",
+										"text": "### \"The redirect_uri is not whitelisted\"\n\nIf you see this, the Handshake callback URL you asked Shopify to send users\nback to wasn't added to the list of allowed URLs in your Shopify app\nsettings.\n\n![Shopify error page saying \"The redirect_uri is not\nwhitelisted\"](DOC_IMAGES/shopify/trouble-unauthorized-redirect.png)"
 									}
 								]
 							}
@@ -19357,9 +19366,9 @@
 					"sources": [
 						{
 							"fileName": "providers/shopify.ts",
-							"line": 111,
+							"line": 124,
 							"character": 13,
-							"url": "https://github.com/fiberinc/handshake/blob/main/handshake/src/providers/shopify.ts#L111"
+							"url": "https://github.com/fiberinc/handshake/blob/main/handshake/src/providers/shopify.ts#L124"
 						}
 					],
 					"parameters": [

@@ -82,7 +82,7 @@ export async function Main({ provider }: Props) {
 						<section className="prose block markdown dark:prose-invert">
 							<h1 id="setup">
 								<Link href="#setup" className="text-inherit">
-									Configuration
+									Provider setup
 								</Link>
 							</h1>
 
@@ -106,12 +106,15 @@ export async function Main({ provider }: Props) {
 						</h1>
 
 						{provider.troubleshoot && (
-							<MdxRenderInline
-								{...await serialize(
-									provider.troubleshoot || '',
-									makeSerializeOptions()
-								)}
-							/>
+							<>
+								<MdxRenderInline
+									{...await serialize(
+										provider.troubleshoot || '',
+										makeSerializeOptions()
+									)}
+								/>
+								<p>–</p>
+							</>
 						)}
 
 						<p>

@@ -21,7 +21,7 @@ export async function makeMetadataFromMdxAt(path: string): Promise<Metadata> {
 	assert(title, 'title');
 
 	return constructMetadata({
-		title: title as string | undefined,
+		title: ((title as string | undefined) || '') + ' – Handshake',
 		description: subtitle as string | undefined,
 	});
 }

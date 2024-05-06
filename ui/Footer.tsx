@@ -15,8 +15,15 @@ export function Footer() {
 				>
 					@FIBER_dev
 				</a>
-				{/* <div>🫱🏻‍🫲🏽</div> */}
-				<div>© 2024 Portalform Inc.</div>
+				{/* <div>🫱🏻‍🫲🏽</div>
+				<div>© 2024 Portalform Inc.</div> */}
+				<a
+					href={'https://github.com/fiberinc/handshake-docs'}
+					className="hover:text-link"
+					target="_blank"
+				>
+					Docs Source
+				</a>
 			</div>
 		</footer>
 	);
