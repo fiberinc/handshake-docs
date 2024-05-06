@@ -7,7 +7,7 @@ import assert from 'assert';
 import chalk from 'chalk';
 import fs from 'fs';
 // ATTENTION You must have handshake available in the parent folder.
-import * as handshake from '../../handshake/lib';
+import * as handshake from '../../handshake/handshake';
 import docsJson from './providers-typedoc.json';
 
 const DOCS_IMAGES_ABS_PATH =

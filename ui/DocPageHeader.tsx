@@ -18,8 +18,12 @@ export function DocPageHeader({
 	titleIcon,
 }: Props) {
 	return (
-		<header className={twMerge('flex flex-col gap-6 mb-10', className)}>
-			{pretitle && <Text variant="pretitle">{pretitle}</Text>}
+		<header className={twMerge('flex flex-col gap-3 mb-10', className)}>
+			{pretitle && (
+				<Text variant="pretitle" className="mb-2">
+					{pretitle}
+				</Text>
+			)}
 			<div className="flex flex-row gap-4 items-center">
 				{titleIcon}
 				<Text variant="h1">

@@ -14,7 +14,7 @@ interface Props {
 export function DocPageMain({ children, className, toc }: Props) {
 	return (
 		<div className="relative flex flex-row gap-16">
-			<div className={twMerge('w-full lg:max-w-[770px]', className)}>
+			<div className={twMerge('w-full lg:max-w-[770px] pb-16', className)}>
 				{children}
 			</div>
 			{toc && toc.length > 0 && (
