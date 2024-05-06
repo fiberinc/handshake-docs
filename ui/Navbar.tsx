@@ -5,33 +5,27 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { PiHandshakeDuotone } from 'react-icons/pi';
 import { twMerge } from 'tailwind-merge';
-import { REPO_URL } from '~/lib/routes';
+import { REPO_URL, ROUTES } from '~/lib/routes';
 
 export function Navbar() {
 	const pathname = usePathname();
 
 	return (
 		<nav className="bg-foreground/70 relative backdrop-blur-md border-b">
-			{/* <div className="absolute left-6 top-[10px] text-[30px]">🫱🏻‍🫲🏽</div> */}
 			<div className="m-auto flex h-[var(--header-height)] flex-row items-center justify-between px-3 md:px-5 lg:px-10">
 				<Link href="/">
 					<h1 className="text-[16px] flex gap-3 items-center">
 						<PiHandshakeDuotone className="w-6 h-6 text-contrast" />
 						<span className="text-contrast text-lg font-semibold">
 							Handshake
-						</span>{' '}
-						{/* 🫱🏻‍🫲🏽&nbsp;&nbsp; */}
-						{/* <span>–</span>
-						<span>OAuth made easy</span> */}
+						</span>
 					</h1>
 				</Link>
 				<div className="flex flex-row gap-10">
 					<Link
-						href="/providers"
+						href={ROUTES.basics}
 						className={twMerge(
-							(pathname.startsWith('/providers') ||
-								pathname.startsWith('/frameworks')) &&
-								'text-contrast underline-offset-4 underline'
+							pathname !== '/' && 'text-contrast underline-offset-4 underline'
 						)}
 					>
 						Docs

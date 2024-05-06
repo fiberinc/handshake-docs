@@ -52,7 +52,8 @@ export default async function Page() {
 							'rounded-md border bg-white px-5 text-black '
 						)}
 					>
-						<GithubLogoMark size={25} /> Star on Github
+						<GithubLogoMark size={25} />{' '}
+						<Text className="text-lg font-medium">Star on Github</Text>
 					</a>
 
 					<a
@@ -65,7 +66,8 @@ export default async function Page() {
 						<span className="flex h-[30px] w-[30px] items-center justify-center rounded-full bg-[#222] text-[20px] leading-[0.5]">
 							▲
 						</span>
-						&nbsp;&nbsp;Deploy to Vercel
+						&nbsp;&nbsp;
+						<Text className="text-lg font-medium">Deploy to Vercel</Text>
 					</a>
 				</section>
 			</header>

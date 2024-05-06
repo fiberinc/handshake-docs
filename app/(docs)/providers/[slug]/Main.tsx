@@ -1,6 +1,5 @@
 import { serialize } from 'next-mdx-remote/serialize';
 import Link from 'next/link';
-import Markdown from 'react-markdown';
 import { Provider } from '~/lib/providers';
 import { ROUTES } from '~/lib/routes';
 import { MdxRenderInline } from '~/ui/mdx/MdxRender';

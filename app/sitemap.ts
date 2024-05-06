@@ -13,7 +13,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 			lastModified: new Date(),
 		},
 		{
-			url: `https://${domain}/providers`,
+			url: `https://${domain}${ROUTES.basics}`,
+			lastModified: new Date(),
+		},
+		{
+			url: `https://${domain}${ROUTES.reference}`,
+			lastModified: new Date(),
+		},
+		{
+			url: `https://${domain}${ROUTES.framework.next}`,
 			lastModified: new Date(),
 		},
 		{

@@ -10,7 +10,7 @@ export default async function LayoutSidebar({ children }: PropsWithChildren) {
 				<Navbar />
 			</div>
 			<div className="h-[var(--header-height)] " />
-			<div className="flex flex-row -h-[100vh] gap-16 justify-start  items-start">
+			<div className="flex flex-row -h-[100vh] gap-10 justify-start  items-start">
 				<aside className="w-[260px] bottom-16 __shrink-0 h-full grow-0 flex ">
 					<div className="block max-h-[calc(100vh_-_var(--header-height))] z-10 overflow-scroll fixed">
 						<div className="p-7 pb-0">

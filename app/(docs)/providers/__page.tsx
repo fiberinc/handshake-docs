@@ -1,4 +1,3 @@
-import { CircleIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 import { BiCircle } from 'react-icons/bi';
 import { getProviders } from '~/lib/providers';
