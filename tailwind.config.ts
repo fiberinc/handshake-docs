@@ -66,6 +66,9 @@ const config: Config = {
 							marginTop: '4em',
 							marginBottom: '4em',
 						},
+						'h1 a, h2 a, h3 a': {
+							color: 'inherit',
+						},
 						'h1, h2, h3': {
 							color: theme('colors.contrast'),
 
@@ -110,7 +113,7 @@ const config: Config = {
 							...theme('fontSize.sm')[1],
 						},
 						'h1, h2, h3, h4': {
-							// 'scroll-margin-top': 'var(--scroll-mt)',
+							'scroll-margin-top': '100px',
 						},
 						ul: {
 							listStyleType: 'none',
@@ -160,7 +163,7 @@ const config: Config = {
 						},
 						pre: {
 							// color: theme('colors.gray.50'),
-							borderRadius: theme('borderRadius.sm'),
+							borderRadius: theme('5px'),
 							padding: theme('padding.5'),
 							boxShadow: theme('boxShadow.md'),
 							border: `1px solid ${theme('borderColor.primary')}`,

@@ -55,7 +55,7 @@ export const makeSerializeOptions = (
 				},
 			],
 			// Add an id= to headings.
-			// rehypeSlug,
+			rehypeSlug,
 			// Add an anchor link to headings.
 			[rehypeAutolinkHeadings, { behavior: 'wrap' }],
 		],
