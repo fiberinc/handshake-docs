@@ -10,7 +10,9 @@ export interface Provider {
 	website: string | null;
 	summary: string | any;
 	docsUrl: string;
+	setup: string | null;
 	troubleshoot: string | null;
+	configuration: string;
 	usage: string;
 	hasLogo?: boolean;
 }
@@ -50,8 +52,10 @@ export async function getProvider(
 		docsUrl: base.docsUrl,
 		website: base.website,
 		hasLogo: !PROVIDERS_WITHOUT_LOGOS.includes(base.id),
-		usage: base.usage || makeProviderUsage(base),
+		configuration: base.configuration || makeProviderUsage(base),
 		troubleshoot: base.troubleshoot,
+		setup: base.setup,
+		usage: base.usage,
 		summary: base.summary,
 		// serialized: await getProviderDocs(base, options),
 	};
@@ -70,7 +74,13 @@ export async function getProviders(): Promise<Provider[]> {
 			objectName: base.objectName,
 			title: base.title,
 			website: base.website,
+			docsUrl: base.docsUrl,
 			hasLogo: !PROVIDERS_WITHOUT_LOGOS.includes(base.id),
+			configuration: base.configuration || makeProviderUsage(base),
+			troubleshoot: base.troubleshoot,
+			setup: base.setup,
+			usage: base.usage,
+			summary: base.summary,
 		};
 	});
 }

@@ -1,4 +1,5 @@
-import { HomeIcon, TriangleUpIcon } from '@radix-ui/react-icons';
+import { BookmarkIcon, HomeIcon, TriangleUpIcon } from '@radix-ui/react-icons';
+import { PropsWithChildren } from 'react';
 import { FaCircle } from 'react-icons/fa';
 import { Provider, getProviders } from '~/lib/providers';
 import { ROUTES } from '~/lib/routes';
@@ -13,23 +14,32 @@ export async function Sidebar() {
 		<div className="flex flex-col gap-8 max-w-full">
 			<section className="flex flex-col">
 				<Text className="font-normal mb-3 text-contrast">Basics</Text>
-				<SidebarLink
-					href="/"
-					icon={<HomeIcon className="w-4" />}
-					label="Getting started"
-				/>
+				<SidebarLinkList>
+					<SidebarLink
+						href={ROUTES.basics}
+						icon={<HomeIcon className="w-4" />}
+						label="Getting started"
+					/>
+					<SidebarLink
+						href={ROUTES.reference}
+						icon={<BookmarkIcon className="w-4" />}
+						label="Reference"
+					/>
+				</SidebarLinkList>
 			</section>
 			<section className="flex flex-col">
 				<Text className="font-normal mb-3 text-contrast">Frameworks</Text>
-				<SidebarLink
-					href={ROUTES.framework.next}
-					icon={<img src="/images/next.svg" width={50} alt="Next.js logo" />}
-					label="Next.js"
-				/>
+				<SidebarLinkList>
+					<SidebarLink
+						href={ROUTES.framework.next}
+						icon={<img src="/images/next.svg" width={50} alt="Next.js logo" />}
+						label="Next.js"
+					/>
+				</SidebarLinkList>
 			</section>
 			<section className="flex flex-col">
 				<Text className="font-normal mb-3 text-contrast">Providers</Text>
-				<ul className="flex flex-col gap-1">
+				<SidebarLinkList>
 					{providers.map((provider) => {
 						return (
 							<li key={provider.id}>
@@ -37,7 +47,7 @@ export async function Sidebar() {
 							</li>
 						);
 					})}
-				</ul>
+				</SidebarLinkList>
 			</section>
 		</div>
 	);
@@ -57,4 +67,8 @@ function SidebarProviderLink(info: Provider) {
 			href={ROUTES.provider(info.id)}
 		/>
 	);
+}
+
+function SidebarLinkList({ children }: PropsWithChildren) {
+	return <ul className="flex flex-col gap-1">{children}</ul>;
 }

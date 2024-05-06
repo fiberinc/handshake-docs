@@ -1,5 +1,6 @@
 import { Provider } from '~/lib/providers';
 import { ProviderLogo } from '~/ui';
+import { DocPageHeader } from '~/ui/DocPageHeader';
 import { Text } from '~/ui/Text';
 
 interface Props {
@@ -9,20 +10,16 @@ interface Props {
 export function Header({ provider }: Props) {
 	return (
 		<>
-			<header className=" flex flex-col gap-6">
-				<Text variant="pretitle">OAuth Providers</Text>
-				<div className="flex flex-row gap-4 items-center">
-					{provider.hasLogo && (
+			<DocPageHeader
+				pretitle="OAuth Providers"
+				titleIcon={
+					provider.hasLogo && (
 						<ProviderLogo id={provider.id} className="w-[35px]" />
-					)}
-					<Text variant="h1">{provider.title}</Text>
-				</div>
-				<div className="flex flex-col gap-1">
-					<Text variant="subtitle">
-						Obtain access tokens from {provider.title} with Handshake
-					</Text>
-				</div>
-			</header>
+					)
+				}
+				title={provider.title}
+				subtitle={`Obtain access tokens from ${provider.title} with Handshake`}
+			/>
 			<header className="hidden flex flex-col gap-6">
 				<Text variant="pretitle">OAuth Providers</Text>
 				{provider.hasLogo && (

@@ -21,8 +21,8 @@ export function Navbar() {
 							Handshake
 						</span>{' '}
 						{/* 🫱🏻‍🫲🏽&nbsp;&nbsp; */}
-						<span>–</span>
-						<span>OAuth made easy</span>
+						{/* <span>–</span>
+						<span>OAuth made easy</span> */}
 					</h1>
 				</Link>
 				<div className="flex flex-row gap-10">

@@ -7,7 +7,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -19,7 +21,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -31,7 +35,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -43,7 +49,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -55,7 +63,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -67,7 +77,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -79,7 +91,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "https://developer-docs.amazon.com/sp-api/docs/website-authorization-workflow",
-    "usage": "```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Amazon } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Amazon({\n      appId: string,\n      clientId: string,\n      clientSecret: string,\n      isDraftApp: true | false,\n    });\n  ],\n  // ...\n};\n```",
+    "configuration": "```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Amazon } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Amazon({\n      appId: string,\n      clientId: string,\n      clientSecret: string,\n      isDraftApp: true | false,\n    });\n  ],\n  // ...\n};\n```",
+    "usage": "",
+    "setup": "",
     "troubleshoot": "Need to \"set up your “Authorize” buttons so that selling partners are\nredirected to the Seller Central (for sellers) or Vendor Central (for\nvendors) sign-in page for their own region.\"\n\n### No localhost redirect\n\nAmazon does not allow setting localhost as a \n`redirect_uri`\n. You may want to\nuse Ngrok or another service to provide a publicly addressable URL.\n\n[https://github.com/amzn/selling-partner-api-docs/issues/26](https://github.com/amzn/selling-partner-api-docs/issues/26)\n\n### Error Code: MD5101\n\nThis means unauthorized redirect URI. localhost URIs are allowed.\n\n### Developer Central – \"You do not have permissions to view this page\"\n\nFYI. Only the primary user of the Seller Central account is able to create\nand modify apps via the \"Developer Central\" page.\n\n[https://github.com/amzn/selling-partner-api-docs/issues/2191](https://github.com/amzn/selling-partner-api-docs/issues/2191)\n\n### Not setup for OAuth\n\n![amazon-not-setup](/images/docs/amazon/not-setup-oauth.png)",
     "summary": ""
   },
@@ -91,7 +105,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -103,7 +119,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -115,7 +133,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -127,7 +147,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -139,7 +161,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -151,7 +175,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -163,7 +189,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -175,7 +203,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -187,7 +217,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -199,7 +231,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -211,7 +245,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -223,7 +259,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -235,7 +273,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -247,7 +287,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -259,7 +301,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -271,7 +315,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -283,7 +329,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -295,7 +343,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -307,7 +357,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -319,7 +371,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -331,7 +385,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -343,7 +399,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -355,7 +413,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -367,7 +427,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -379,7 +441,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -391,7 +455,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -403,7 +469,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -415,7 +483,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -427,7 +497,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -439,7 +511,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -451,7 +525,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -463,7 +539,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -475,7 +553,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -487,7 +567,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -499,7 +581,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -511,7 +595,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -523,7 +609,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -535,7 +623,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -547,7 +637,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -559,7 +651,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -571,7 +665,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -583,7 +679,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -595,7 +693,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -607,7 +707,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -619,7 +721,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -631,7 +735,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -643,7 +749,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -655,7 +763,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -667,7 +777,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -679,7 +791,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -691,7 +805,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -703,7 +819,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -715,7 +833,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -727,7 +847,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": "Connect to your customers' [Faire](https://faire.com) accounts.\n\n## Usage\n\nProvide the following arguments:\n\n\n```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Faire } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Faire({\n      clientId: process.env.FAIRE_CLIENT_ID!, // string\n      clientSecret: process.env.FAIRE_CLIENT_SECRET!, // string\n      scopes: [\"READ_BRAND\"], // FaireScope[]\n    }),\n  ],\n  // ...\n};\n```\n\n\nNote that Faire uses the \"Application ID\" and \"Secret ID\" as the client ID\nand client secret in the OAuth flow.\n\n## Setup\n\n[Documentation](https://faire.github.io/external-api-v2-docs/#using-oauth)\n\n[Support article](https://www.faire.com/support/articles/4409994540571)\n\n![faire-credentials](/images/docs/faire-creds.png)"
   },
@@ -739,7 +861,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -751,7 +875,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -763,7 +889,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -775,7 +903,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -787,7 +917,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -799,7 +931,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -811,7 +945,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -823,7 +959,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -835,7 +973,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -847,7 +987,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -859,7 +1001,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -871,7 +1015,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -883,7 +1029,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -895,7 +1043,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -907,7 +1057,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -919,7 +1071,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -931,7 +1085,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -943,7 +1099,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -955,7 +1113,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -967,7 +1127,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -979,7 +1141,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -991,7 +1155,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1003,7 +1169,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1015,7 +1183,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1027,7 +1197,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1039,7 +1211,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1051,7 +1225,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1063,7 +1239,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1075,7 +1253,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": "## Usage\n\nProvide the following arguments:\n\n\n```ts\n// Inside app/options.ts\n\nimport { Hubspot } from \"handshake\";\n\nHubspot({\n  clientId: string,\n  clientSecret: string,\n  scopes: [\n    \"e-commerce\",\n    \"crm.schemas.contacts.read\",\n    \"crm.objects.contacts.read\",\n  ],\n});\n```\n\n\n### Configure the Callback URL\n\nMake sure your Handshake URL is allowed within your Hubspot app's Auth tab:\n\n![hubspot-redirect-settings](/images/docs/hubspot-redirect.png)\n\nFollow the format: \n`https://HANDSHAKE_URL/auth/hubspot/callback`"
   },
@@ -1087,7 +1267,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1099,7 +1281,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1111,7 +1295,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1123,7 +1309,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1135,7 +1323,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1147,7 +1337,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1159,7 +1351,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1171,7 +1365,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1183,7 +1379,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1195,7 +1393,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1207,7 +1407,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1219,7 +1421,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1231,7 +1435,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1243,7 +1449,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1255,7 +1463,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1267,7 +1477,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1279,7 +1491,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1291,7 +1505,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1303,7 +1519,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1315,7 +1533,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1327,7 +1547,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1339,7 +1561,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1351,7 +1575,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1363,7 +1589,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1375,7 +1603,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1387,7 +1617,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1399,7 +1631,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1411,7 +1645,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1423,7 +1659,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1435,7 +1673,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1447,7 +1687,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1459,7 +1701,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": "Connect to your customers' [Monday](https://monday.com) accounts.\n\n## Usage\n\nProvide the following arguments:\n\n\n```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Monday } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Monday({\n      clientId: process.env.MONDAY_CLIENT_ID!, // string\n      clientSecret: process.env.MONDAY_CLIENT_SECRET!, // string\n      scopes: [\"account:read\"], // MondayScope[]\n    }),\n  ],\n  // ...\n};\n```\n\n\n## Setup\n\n[Documentation](https://developer.monday.com/apps/docs/oauth)\n\n![monday-credentials](/images/docs/monday-creds.png)\n![monday-credentials](/images/docs/monday-allow-redirect.png)\n\n## Troubleshooting\n\n### \"invalid_scope: Invalid scope param\"\n\nYou configured Handshake to request a scope that you didn't enable in your\napp's settings."
   },
@@ -1471,7 +1715,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1483,7 +1729,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1495,7 +1743,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1507,7 +1757,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1519,7 +1771,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1531,7 +1785,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1543,7 +1799,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1555,7 +1813,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1567,7 +1827,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1579,7 +1841,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1591,7 +1855,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1603,7 +1869,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1615,7 +1883,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1627,7 +1897,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1639,7 +1911,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1651,7 +1925,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1663,7 +1939,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1675,7 +1953,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1687,7 +1967,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1699,7 +1981,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1711,7 +1995,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1723,7 +2009,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1735,7 +2023,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1747,7 +2037,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1759,7 +2051,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1771,7 +2065,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1783,7 +2079,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1795,7 +2093,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1807,7 +2107,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1819,7 +2121,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1831,7 +2135,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": "## Usage\n\nProvide the following arguments:\n\n\n```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Salesforce } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Salesforce({\n      clientId: string,\n      clientSecret: string,\n      scopes: string[],\n      issuer?: string,\n    }),\n  ],\n  // ...\n};\n```\n\n\n[Scope documentation](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_tokens_scopes.htm&type=5)"
   },
@@ -1843,7 +2149,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1855,7 +2163,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1867,9 +2177,11 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
-    "usage": "",
+    "configuration": "```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Shopify } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Shopify({\n      clientId: process.env.SHOPIFY_CLIENT_ID!,\n      clientSecret: process.env.SHOPIFY_CLIENT_SECRET!,\n      scopes: [\"read_orders\", \"read_products\"],\n    }),\n  ],\n  // ...\n};\n```",
+    "usage": "You must include an \n`extras.shop`\n parameter when redirecting users to Handshake, to identify the shop that you're trying to take through the OAuth flow.\n\nThe final URL might look something like this:\n\n\n```bash\nhttps://YOUR_HANDSHAKE_INSTANCE_URL/auth/shopify/redirect?\n  state=12345\n  &extras.shop=hahvaleu.myshopify.com\n  &callback_uri=http://YOUR_APP_HOST/shopifySyncSuccess\n```",
+    "setup": "The \n`clientId`\n and \n`clientSecret`\n arguments will come from your Shopify app. Our team at Fiber has written [an in-depth tutorial on how authentication works in the Shopify ecosystem](https://fiber.dev/blog/shopify-oauth-guide).\n\nOnce you have an app, make sure to do the following:\n\n## Configure the Callback URL\n\nMake sure your Handshake URL is allowed within your Shopify app's\nConfiguration tab:\n\n![shopify-redirection](/images/docs/shopify-redirect.png)\n\nFollow the format: \n`https://HANDSHAKE_URL/auth/shopify/callback`",
     "troubleshoot": "",
-    "summary": "## Usage\n\nProvide the following arguments:\n\n\n```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Shopify } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Shopify({\n      clientId: process.env.SHOPIFY_CLIENT_ID!,\n      clientSecret: process.env.SHOPIFY_CLIENT_SECRET!,\n      scopes: [\"read_orders\", \"read_products\"],\n    }),\n  ],\n  // ...\n};\n```\n\n\n## Redirection\n\nInclude an \n`extras.shop`\n parameter when redirecting users to Handshake:\n\n\n```ts\nhttps://HANDSHAKE_HOST/auth/shopify/redirect?\n  state=12345\n  &extras.shop=hahvaleu.myshopify.com\n  &callback_uri=http://YOUR_APP_HOST/shopifySyncSuccess\n```\n\n\n## Configure the Callback URL\n\nMake sure your Handshake URL is allowed within your Shopify app's\nConfiguration tab:\n\n![shopify-redirection](/images/docs/shopify-redirect.png)\n\nFollow the format: \n`https://HANDSHAKE_URL/auth/shopify/callback`"
+    "summary": ""
   },
   {
     "id": "slack",
@@ -1879,7 +2191,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1891,7 +2205,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1903,7 +2219,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1915,7 +2233,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1927,7 +2247,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1939,7 +2261,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1951,7 +2275,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1963,7 +2289,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1975,7 +2303,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1987,7 +2317,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -1999,7 +2331,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2011,7 +2345,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2023,7 +2359,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2035,7 +2373,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2047,7 +2387,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2059,7 +2401,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": "## Usage\n\nProvide the following arguments:\n\n\n```ts title=\"app/options.ts\"\n\nimport { Stripe } from \"handshake\";\n\nStripe({\n  clientId: \"ca_\",\n  clientSecret: \"sk_\",\n  scopes: [],\n});\n```\n\n\n### Allow your Handshake callback URL\n\nIn your Stripe app settings.\n\nYou can set up a localhost callback by toggling the \"View test data\" switch.\n\n![stripe-callback-settings](/images/docs/stripe-redirect.png)"
   },
@@ -2071,7 +2415,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2083,7 +2429,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2095,7 +2443,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2107,7 +2457,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2119,7 +2471,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2131,7 +2485,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2143,7 +2499,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2155,7 +2513,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2167,7 +2527,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2179,7 +2541,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2191,7 +2555,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2203,7 +2569,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2215,7 +2583,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2227,7 +2597,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2239,7 +2611,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2251,7 +2625,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2263,7 +2639,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2275,7 +2653,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2287,7 +2667,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2299,7 +2681,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2311,7 +2695,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2323,7 +2709,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2335,7 +2723,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2347,7 +2737,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2359,7 +2751,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2371,7 +2765,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2383,7 +2779,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2395,7 +2793,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2407,7 +2807,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2419,7 +2821,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2431,7 +2835,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2443,7 +2849,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2455,7 +2863,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2467,7 +2877,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2479,7 +2891,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2491,7 +2905,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2503,7 +2919,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2515,7 +2933,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2527,7 +2947,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2539,7 +2961,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2551,7 +2975,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2563,7 +2989,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2575,7 +3003,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2587,7 +3017,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2599,7 +3031,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2611,7 +3045,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2623,7 +3059,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2635,7 +3073,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2647,7 +3087,9 @@
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2659,7 +3101,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   },
@@ -2671,7 +3115,9 @@
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
     "docsUrl": "",
+    "configuration": "",
     "usage": "",
+    "setup": "",
     "troubleshoot": "",
     "summary": ""
   }

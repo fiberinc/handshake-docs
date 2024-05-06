@@ -5,6 +5,7 @@ import { getProvider, getProviders } from '~/lib/providers';
 import { makeSerializeOptions } from '~/ui/mdx/serialize-options';
 import { Main } from './Main';
 import { TableOfContents } from './TableOfContents';
+import { DocPageMain } from '~/ui/DocPageMain';
 
 interface Props {
 	params: {
@@ -39,20 +40,24 @@ export default async function Page({ params }: Props) {
 
 	return (
 		<div className="relative flex flex-row gap-16">
-			<div className="w-full lg:max-w-[770px]">
+			<DocPageMain>
 				<Main provider={provider} />
-			</div>
+			</DocPageMain>
 			<nav className="hidden xl:block w-[200px]">
 				<div className="fixed">
 					<TableOfContents
 						links={
 							[
+								{ slug: 'configuration', title: 'Configuration' },
 								{ slug: 'usage', title: 'Usage' },
+								provider.setup && {
+									slug: 'setup',
+									title: 'Provider setup',
+								},
 								provider.troubleshoot && {
 									slug: 'troubleshoot',
 									title: 'Troubleshoot',
 								},
-								{ slug: 'tutorial', title: 'Step-by-step guide' },
 							].filter(Boolean) as any[]
 						}
 					/>

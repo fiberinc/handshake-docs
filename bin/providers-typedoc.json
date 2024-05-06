@@ -749,7 +749,7 @@
 			"sources": [
 				{
 					"fileName": "providers/amazon-seller.ts",
-					"line": 73,
+					"line": 72,
 					"character": 13
 				}
 			],
@@ -782,7 +782,7 @@
 								]
 							},
 							{
-								"tag": "@usage",
+								"tag": "@configuration",
 								"content": [
 									{
 										"kind": "code",
@@ -812,7 +812,7 @@
 					"sources": [
 						{
 							"fileName": "providers/amazon-seller.ts",
-							"line": 73,
+							"line": 72,
 							"character": 13
 						}
 					],
@@ -18624,7 +18624,7 @@
 			"sources": [
 				{
 					"fileName": "providers/shopify.ts",
-					"line": 98,
+					"line": 102,
 					"character": 13
 				}
 			],
@@ -18636,45 +18636,73 @@
 					"kind": 4096,
 					"flags": {},
 					"comment": {
-						"summary": [
+						"summary": [],
+						"blockTags": [
 							{
-								"kind": "text",
-								"text": "## Usage\n\nProvide the following arguments:\n\n"
+								"tag": "@configuration",
+								"content": [
+									{
+										"kind": "code",
+										"text": "```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Shopify } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Shopify({\n      clientId: process.env.SHOPIFY_CLIENT_ID!,\n      clientSecret: process.env.SHOPIFY_CLIENT_SECRET!,\n      scopes: [\"read_orders\", \"read_products\"],\n    }),\n  ],\n  // ...\n};\n```"
+									}
+								]
 							},
 							{
-								"kind": "code",
-								"text": "```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Shopify } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Shopify({\n      clientId: process.env.SHOPIFY_CLIENT_ID!,\n      clientSecret: process.env.SHOPIFY_CLIENT_SECRET!,\n      scopes: [\"read_orders\", \"read_products\"],\n    }),\n  ],\n  // ...\n};\n```"
+								"tag": "@usage",
+								"content": [
+									{
+										"kind": "text",
+										"text": "You must include an "
+									},
+									{
+										"kind": "code",
+										"text": "`extras.shop`"
+									},
+									{
+										"kind": "text",
+										"text": " parameter when redirecting users to Handshake, to identify the shop that you're trying to take through the OAuth flow.\n\nThe final URL might look something like this:\n\n"
+									},
+									{
+										"kind": "code",
+										"text": "```bash\nhttps://YOUR_HANDSHAKE_INSTANCE_URL/auth/shopify/redirect?\n  state=12345\n  &extras.shop=hahvaleu.myshopify.com\n  &callback_uri=http://YOUR_APP_HOST/shopifySyncSuccess\n```"
+									}
+								]
 							},
 							{
-								"kind": "text",
-								"text": "\n\n## Redirection\n\nInclude an "
-							},
-							{
-								"kind": "code",
-								"text": "`extras.shop`"
-							},
-							{
-								"kind": "text",
-								"text": " parameter when redirecting users to Handshake:\n\n"
-							},
-							{
-								"kind": "code",
-								"text": "```ts\nhttps://HANDSHAKE_HOST/auth/shopify/redirect?\n  state=12345\n  &extras.shop=hahvaleu.myshopify.com\n  &callback_uri=http://YOUR_APP_HOST/shopifySyncSuccess\n```"
-							},
-							{
-								"kind": "text",
-								"text": "\n\n## Configure the Callback URL\n\nMake sure your Handshake URL is allowed within your Shopify app's\nConfiguration tab:\n\n![shopify-redirection](DOC_IMAGES/shopify-redirect.png)\n\nFollow the format: "
-							},
-							{
-								"kind": "code",
-								"text": "`https://HANDSHAKE_URL/auth/shopify/callback`"
+								"tag": "@setup",
+								"content": [
+									{
+										"kind": "text",
+										"text": "The "
+									},
+									{
+										"kind": "code",
+										"text": "`clientId`"
+									},
+									{
+										"kind": "text",
+										"text": " and "
+									},
+									{
+										"kind": "code",
+										"text": "`clientSecret`"
+									},
+									{
+										"kind": "text",
+										"text": " arguments will come from your Shopify app. Our team at Fiber has written [an in-depth tutorial on how authentication works in the Shopify ecosystem](https://fiber.dev/blog/shopify-oauth-guide).\n\nOnce you have an app, make sure to do the following:\n\n## Configure the Callback URL\n\nMake sure your Handshake URL is allowed within your Shopify app's\nConfiguration tab:\n\n![shopify-redirection](DOC_IMAGES/shopify-redirect.png)\n\nFollow the format: "
+									},
+									{
+										"kind": "code",
+										"text": "`https://HANDSHAKE_URL/auth/shopify/callback`"
+									}
+								]
 							}
 						]
 					},
 					"sources": [
 						{
 							"fileName": "providers/shopify.ts",
-							"line": 98,
+							"line": 102,
 							"character": 13
 						}
 					],

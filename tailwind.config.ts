@@ -41,8 +41,8 @@ const config: Config = {
 			},
 			fontSize: {
 				xs: '13px',
-				sm: '15px',
-				base: '16px',
+				sm: '14px',
+				base: '15px',
 				lg: '18px',
 				'3xl': '28px',
 				'4xl': '35px',
@@ -57,13 +57,14 @@ const config: Config = {
 				DEFAULT: {
 					css: {
 						maxWidth: 'none',
-						color: theme('colors.default'),
+						color: theme('colors.contrast'),
 						// fontSize: theme('fontSize.base')[0],
 						fontSize: '18px',
 						hr: {
-							// borderColor: theme('colors.gray.100'),
-							marginTop: '3em',
-							marginBottom: '3em',
+							borderColor: theme('borderColor.DEFAULT'),
+							borderTopWidth: '2px',
+							marginTop: '4em',
+							marginBottom: '4em',
 						},
 						'h1, h2, h3': {
 							color: theme('colors.contrast'),
@@ -73,12 +74,12 @@ const config: Config = {
 						h1: {
 							fontSize: '1.5em',
 							fontWeight: '500',
-							marginTop: `50px`,
+							marginTop: `70px`,
 							marginBottom: `.0em`,
 						},
 						h2: {
-							fontSize: '1.3em',
-							fontWeight: '500',
+							fontSize: '1.25em',
+							fontWeight: '400',
 							marginBottom: `${1 / 3}em`,
 						},
 						h3: {
@@ -133,7 +134,7 @@ const config: Config = {
 							fontWeight: '500', // theme('fontWeight.medium'),
 							textDecoration: 'none',
 							// borderBottom: `1px solid rgb(var(--text-default))`,
-							color: theme('colors.contrast/100'),
+							color: theme('colors.link'),
 						},
 						'a:hover': {
 							borderBottomWidth: '2px',

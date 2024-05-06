@@ -1,7 +1,7 @@
 export function Footer() {
 	return (
 		<footer className="bg-foreground border-t">
-			<div className="text-mono text-md m-auto flex flex-row flex-wrap justify-between gap-10 px-3 py-10 font-medium md:px-5 lg:w-[900px] lg:px-0">
+			<div className="text-mono text-md m-auto flex flex-row flex-wrap justify-between gap-10 px-3 py-10 font-medium md:px-5 lg:px-8">
 				<div>
 					A project by{' '}
 					<a href="https://fiber.dev" className="underline">

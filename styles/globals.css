@@ -82,8 +82,8 @@ a {
 			--bg-background: 10 9 7;
 			--bg-foreground: 18 17 16;
 
-			--border-primary: #1f1d1a;
-			--border-stronger: #252220;
+			--border-primary: #1e1d1d;
+			--border-stronger: #424040;
 			--border-lighter: var(--gray-850);
 			--color-link: var(--blue-400);
 		}

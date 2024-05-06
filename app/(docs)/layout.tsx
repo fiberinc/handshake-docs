@@ -11,12 +11,12 @@ export default async function LayoutSidebar({ children }: PropsWithChildren) {
 			</div>
 			<div className="h-[var(--header-height)] " />
 			<div className="flex flex-row gap-16 justify-start p-7 pt-10 items-start">
-				<aside className="w-[250px] bottom-16 __shrink-0 h-full grow-0 flex overflow-scroll">
+				<aside className="w-[220px] bottom-16 __shrink-0 h-full grow-0 flex overflow-scroll">
 					<div className="block w-full __max-h-[calc(100vh_-_var(--header-height))] z-10">
 						<Sidebar />
 					</div>
 				</aside>
-				<div className="flex pb-16 flex-1 overflow-hidden lg:pr-10">
+				<div className="pb-16 flex-1 overflow-hidden lg:pr-10 w-full black">
 					{children}
 				</div>
 			</div>

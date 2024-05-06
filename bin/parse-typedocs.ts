@@ -27,6 +27,8 @@ function extractClasses(docs: any) {
 		docsUrl: string | null;
 		troubleshoot: string | null;
 		usage: string | null;
+		configuration: string | null;
+		setup: string | null;
 		summary: string | null;
 	}[] = [];
 
@@ -121,7 +123,11 @@ function extractClasses(docs: any) {
 				),
 				// logo,
 				docsUrl: joinParsedContent(blockTagsByName.reference ?? []),
+				configuration: replaceImageRoot(
+					joinParsedContent(blockTagsByName.configuration ?? [])
+				),
 				usage: replaceImageRoot(joinParsedContent(blockTagsByName.usage ?? [])),
+				setup: replaceImageRoot(joinParsedContent(blockTagsByName.setup ?? [])),
 				troubleshoot: replaceImageRoot(
 					joinParsedContent(blockTagsByName.troubleshoot ?? [])
 				),

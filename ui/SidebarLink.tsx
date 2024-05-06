@@ -14,14 +14,14 @@ interface SidebarLinkProps {
 
 export function SidebarLink({ icon, label, href }: SidebarLinkProps) {
 	const pathname = usePathname();
-	const isActive = pathname === href;
+	const isActive = pathname.startsWith(href);
 
 	return (
 		<Link href={href}>
 			<div
 				className={twMerge(
-					'flex flex-row items-center justify-start gap-3 p-2 h-[40px] group w-full',
-					isActive && 'bg-red'
+					'flex flex-row items-center justify-start gap-3 p-2 h-[40px] group w-full rounded-md',
+					isActive && 'text-contrast bg-contrast/[4%]'
 				)}
 			>
 				<div className="w-[20px] flex justify-center shrink-0">{icon}</div>

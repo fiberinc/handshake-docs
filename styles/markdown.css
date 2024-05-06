@@ -8,23 +8,6 @@
 	/* font-size: 17px; */
 	/* color: rgb(var(--text-contrast)); */
 
-	:where(a):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
-		text-decoration: none;
-		/* text-decoration: underline;
-		text-underline-offset: 4px; */
-		border-bottom: 1px solid rgb(var(--text-contrast) / 0.5);
-		border-bottom-style: dashed;
-		padding-bottom: 1px;
-		color: rgb(var(--text-contrast));
-	}
-
-	:where(ul):not(:where([class~='not-prose'], [class~='not-prose'] *)) > li {
-		list-style-type: '–    ';
-		padding-left: 0 !important;
-		/* list-style-position: inside; */
-		margin-left: 25px;
-	}
-
 	blockquote,
 	iframe,
 	.twitter-tweet,
@@ -37,12 +20,6 @@
 
 	.twitter-tweet {
 		align-self: center;
-	}
-
-	hr {
-		border: none;
-		border-bottom: 3px solid #aaaaaa22;
-		margin: 2em 0;
 	}
 
 	iframe {
@@ -110,8 +87,9 @@
 		color: rgb(var(--text-contrast));
 		border: 1px solid var(--border-primary);
 		border-radius: 4px;
-		font-size: 0.95rem;
+		font-size: 0.9rem;
 		padding: 3px 5px;
+		margin: 0 3px;
 		background: rgb(var(--color-foreground));
 	}
 

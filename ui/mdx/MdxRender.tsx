@@ -6,6 +6,12 @@ import { MDXRemote, MDXRemoteProps } from 'next-mdx-remote';
 import { twMerge } from 'tailwind-merge';
 import { MARKDOWN_COMPONENTS } from './components';
 
+export function MdxRenderInline<TScope, TFrontmatter>(
+	props: MDXRemoteProps<TScope, TFrontmatter>
+) {
+	return <MDXRemote {...props} components={MARKDOWN_COMPONENTS} />;
+}
+
 export function MdxRender<TScope, TFrontmatter>(
 	props: MDXRemoteProps<TScope, TFrontmatter>
 ) {
