@@ -1,64 +1,21 @@
 /* We also have tailwind.config.cjs typography styling the Markdown. */
 
 .markdown {
-	/* line-height: 1.8 !important; */
-	/* display: flex;
-	flex-direction: column; */
-	/* font-weight: 400; */
-	/* font-size: 17px; */
-	/* color: rgb(var(--text-contrast)); */
-
-	blockquote,
-	iframe,
-	.twitter-tweet,
-	/* & > p, */
-	& > ul,
-	& > div,
-	& > ol {
-		margin-bottom: 1.5em !important;
-	}
-
-	.twitter-tweet {
-		align-self: center;
-	}
-
-	iframe {
-		margin: 0 auto;
-	}
-
-	:where(blockquote):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
-		border-left: 4px solid #f3f4f6;
-		padding-left: 1em;
-	}
-
-	/* SHOW LINE NUMBERS */
-
-	code {
-		counter-reset: line;
-	}
-
-	code > [data-line]::before {
-		counter-increment: line;
-		content: counter(line);
-
-		/* Other styling */
-		display: inline-block;
-		width: 1rem;
-		margin-right: 1rem;
-		text-align: right;
-		color: gray;
-	}
-
-	img {
-		border: 1px solid var(--border-primary);
+	/* Style image captions added by our `add-image-caption.ts` Remark plugin. */
+	p > img + p {
+		font-size: 0.85em;
+		color: rgb(var(--text-contrast));
+		width: fit-content;
+		margin: auto;
+		margin-top: -20px;
 	}
 
 	code[data-line-numbers-max-digits='2'] > [data-line]::before {
-		width: 2rem;
+		width: 10px;
 	}
 
 	code[data-line-numbers-max-digits='3'] > [data-line]::before {
-		width: 3rem;
+		width: 15px;
 	}
 
 	/* SHOW TAB TITLE */
@@ -100,6 +57,60 @@
 		padding: 20px;
 		font-size: 0.86rem;
 		background: rgb(var(--color-foreground));
-		tab-size: 300px;
+		tab-size: 20px;
+	}
+
+	/* SHOW LINE NUMBERS */
+
+	code {
+		counter-reset: line;
+	}
+
+	code > [data-line]::before {
+		counter-increment: line;
+		content: counter(line);
+
+		/* Other styling */
+		display: inline-block;
+		width: 1rem;
+		margin-right: 1rem;
+		text-align: right;
+		color: gray;
+	}
+}
+
+.markdownAAAA {
+	/* line-height: 1.8 !important; */
+	/* display: flex;
+	flex-direction: column; */
+	/* font-weight: 400; */
+	/* font-size: 17px; */
+	/* color: rgb(var(--text-contrast)); */
+
+	blockquote,
+	iframe,
+	.twitter-tweet,
+	/* & > p, */
+	& > ul,
+	& > div,
+	& > ol {
+		margin-bottom: 1.5em !important;
+	}
+
+	.twitter-tweet {
+		align-self: center;
+	}
+
+	iframe {
+		margin: 0 auto;
+	}
+
+	:where(blockquote):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+		border-left: 4px solid #f3f4f6;
+		padding-left: 1em;
+	}
+
+	img {
+		border: 1px solid var(--border-primary);
 	}
 }

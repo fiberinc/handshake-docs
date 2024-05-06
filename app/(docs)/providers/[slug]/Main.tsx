@@ -41,8 +41,8 @@ export async function Main({ provider }: Props) {
 						)}
 					/>
 					<p>
-						Consult <Link href={ROUTES.reference}>our reference</Link> to learn
-						about <code>HandshakeOptions</code>.
+						<Link href={ROUTES.reference}>Consult the reference</Link> to learn
+						more about <code>HandshakeOptions</code>.
 					</p>
 				</section>
 
@@ -62,8 +62,8 @@ export async function Main({ provider }: Props) {
 					</pre>
 					<p>
 						Where <code className="!text-green-400">PROVIDER_ID</code> is either{' '}
-						<code>{provider.id}</code> or whatever you feed as the optional{' '}
-						<code>id</code> argument to the{' '}
+						<code>{provider.id}</code> or the value you passed as the optional{' '}
+						<code>id</code> argument of the{' '}
 						<code>
 							{provider.objectName}({})
 						</code>{' '}

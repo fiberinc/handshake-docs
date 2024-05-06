@@ -18624,7 +18624,7 @@
 			"sources": [
 				{
 					"fileName": "providers/shopify.ts",
-					"line": 102,
+					"line": 108,
 					"character": 13
 				}
 			],
@@ -18660,11 +18660,11 @@
 									},
 									{
 										"kind": "text",
-										"text": " parameter when redirecting users to Handshake, to identify the shop that you're trying to take through the OAuth flow.\n\nThe final URL might look something like this:\n\n"
+										"text": " parameter when redirecting users to\nHandshake, to identify the shop that you're trying to take through the OAuth\nflow.\n\nThe final URL might look something like this:\n\n"
 									},
 									{
 										"kind": "code",
-										"text": "```bash\nhttps://YOUR_HANDSHAKE_INSTANCE_URL/auth/shopify/redirect?\n  state=12345\n  &extras.shop=hahvaleu.myshopify.com\n  &callback_uri=http://YOUR_APP_HOST/shopifySyncSuccess\n```"
+										"text": "```bash\nhttps://YOUR_HANDSHAKE_INSTANCE_URL/auth/shopify/redirect?\n  state=12345\n  &extras.shop=example.myshopify.com\n  &callback_uri=http://YOUR_APP_URL/shopify-integration/done\n```"
 									}
 								]
 							},
@@ -18689,7 +18689,15 @@
 									},
 									{
 										"kind": "text",
-										"text": " arguments will come from your Shopify app. Our team at Fiber has written [an in-depth tutorial on how authentication works in the Shopify ecosystem](https://fiber.dev/blog/shopify-oauth-guide).\n\nOnce you have an app, make sure to do the following:\n\n## Configure the Callback URL\n\nMake sure your Handshake URL is allowed within your Shopify app's\nConfiguration tab:\n\n![shopify-redirection](DOC_IMAGES/shopify-redirect.png)\n\nFollow the format: "
+										"text": " arguments to the "
+									},
+									{
+										"kind": "code",
+										"text": "`Shopify()`"
+									},
+									{
+										"kind": "text",
+										"text": " handler come\nfrom your Shopify app.\n\nOur team at Fiber has written [an in-depth tutorial on how authentication\nworks in the Shopify ecosystem](https://fiber.dev/blog/shopify-oauth-guide).\n\nOnce you have an app, make sure to do the following:\n\n## Configure the Callback URL\n\nMake sure your Handshake URL is allowed within your Shopify app's\nConfiguration tab:\n\n![](DOC_IMAGES/shopify-redirect.png)\n\nFollow the format: "
 									},
 									{
 										"kind": "code",
@@ -18702,7 +18710,7 @@
 					"sources": [
 						{
 							"fileName": "providers/shopify.ts",
-							"line": 102,
+							"line": 108,
 							"character": 13
 						}
 					],

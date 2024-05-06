@@ -70,5 +70,5 @@ function SidebarProviderLink(info: Provider) {
 }
 
 function SidebarLinkList({ children }: PropsWithChildren) {
-	return <ul className="flex flex-col gap-1">{children}</ul>;
+	return <ul className="flex flex-col gap-0">{children}</ul>;
 }
