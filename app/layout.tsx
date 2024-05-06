@@ -2,6 +2,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { Toaster } from 'sonner';
 import { constructMetadata } from '~/lib/construct-metadata';
 import '~/styles/globals.css';
+import { DarkModeScript } from '~/ui/dark-mode';
 
 export const metadata = constructMetadata();
 
@@ -22,6 +23,7 @@ export default function RootLayout({
 				<Toaster />
 				<>{children}</>
 				<Analytics />
+				<DarkModeScript />
 			</body>
 		</html>
 	);

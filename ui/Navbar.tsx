@@ -1,11 +1,13 @@
 'use client';
 
+import { Text } from '~/ui/Text';
 import { GitHubLogoIcon } from '@radix-ui/react-icons';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { PiHandshakeDuotone } from 'react-icons/pi';
 import { twMerge } from 'tailwind-merge';
 import { REPO_URL, ROUTES } from '~/lib/routes';
+import { NavThemeToggle } from './NavbarThemeToggle';
 
 export function Navbar() {
 	const pathname = usePathname();
@@ -16,20 +18,22 @@ export function Navbar() {
 				<Link href="/">
 					<h1 className="text-[16px] flex gap-3 items-center">
 						<PiHandshakeDuotone className="w-6 h-6 text-contrast" />
-						<span className="text-contrast text-lg font-semibold">
+						<span className="text-contrast text-[18px] font-medium">
 							Handshake
 						</span>
+						{pathname !== '/' && <Text>Docs</Text>}
 					</h1>
 				</Link>
-				<div className="flex flex-row gap-10">
-					<Link
-						href={ROUTES.basics}
-						className={twMerge(
-							pathname !== '/' && 'text-contrast underline-offset-4 underline'
-						)}
-					>
-						Docs
-					</Link>
+				<div className="flex flex-row gap-6 items-center">
+					<NavThemeToggle />
+					{pathname === '/' && (
+						<Link
+							href={ROUTES.basics}
+							className={twMerge('text-contrast underline-offset-4 underline')}
+						>
+							Docs
+						</Link>
+					)}
 					<a
 						href={REPO_URL}
 						target="_blank"

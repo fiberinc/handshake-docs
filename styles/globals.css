@@ -46,7 +46,7 @@ a {
 
 @layer base {
 	:root {
-		--header-height: 70px;
+		--header-height: 60px;
 
 		/* --text-contrast: #000; */
 		--color-highlight: #e16767;
@@ -73,19 +73,18 @@ a {
 	}
 
 	/* Now for the dark primary */
-	@media (prefers-color-scheme: dark) {
-		:root {
-			--color-highlight: #e16767;
-			--text-default: 188 182 180;
-			--text-contrast: 255 255 255;
 
-			--bg-background: 10 9 7;
-			--bg-foreground: 18 17 16;
+	:root.dark {
+		--color-highlight: #e16767;
+		--text-default: 188 182 180;
+		--text-contrast: 255 255 255;
 
-			--border-primary: #1e1d1d;
-			--border-stronger: #424040;
-			--border-lighter: var(--gray-850);
-			--color-link: var(--blue-400);
-		}
+		--bg-background: 10 9 7;
+		--bg-foreground: 18 17 16;
+
+		--border-primary: #1e1d1d;
+		--border-stronger: #424040;
+		--border-lighter: var(--gray-850);
+		--color-link: var(--blue-400);
 	}
 }

@@ -45,6 +45,18 @@ export async function PageFromMdxAt({ path }: { path: string }) {
 				title={title as string}
 				titleIcon={
 					titleIconSrc ? (
+						// 	<div
+						// 	style={{
+						// 		// WebkitMaskImage: `url('/images/logos/${id}.svg')`,
+						// 		backgroundImage: `url('/images/logos/${id}.svg')`,
+						// 		backgroundRepeat: 'no-repeat',
+						// 		// maskImage: `url('/images/logos/${id}.svg')`,
+						// 		// backgroundColor: 'white',
+						// 		maskRepeat: 'no-repeat',
+						// 	}}
+						// 	{...props}
+						// />
+
 						<img src={titleIconSrc as string} width={50} alt="Title logo" />
 					) : null
 				}

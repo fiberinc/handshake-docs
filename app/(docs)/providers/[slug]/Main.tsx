@@ -30,17 +30,17 @@ export async function Main({ provider }: Props) {
 					<pre>
 						<code>
 							https://YOUR_HANDSHAKE_INSTANCE_URL/auth/
-							<span className="text-green-400">PROVIDER_ID</span>/redirect
+							<span className="text-green-400">HANDLER_ID</span>/redirect
 						</code>
 					</pre>
 					<p>
-						Where <code className="!text-green-400">PROVIDER_ID</code> is either{' '}
+						Where <code className="!text-green-400">HANDLER_ID</code> is either{' '}
 						<code>{provider.id}</code> or the value passed to the optional{' '}
 						<code>id</code> argument of the{' '}
 						<code>
 							{provider.objectName}({})
 						</code>{' '}
-						factory.
+						factory. (See <Link href="#usage">Usage</Link>.)
 					</p>
 					<p>
 						Handshake will take the user through the {provider.title} OAuth flow
@@ -54,7 +54,7 @@ export async function Main({ provider }: Props) {
 
 				<Divider />
 				<section className="prose block markdown dark:prose-invert">
-					<h1 id="Usage">
+					<h1 id="usage">
 						<Link href="#Usage" className="text-inherit">
 							Usage
 						</Link>
@@ -73,7 +73,7 @@ export async function Main({ provider }: Props) {
 					/>
 					<p>
 						<Link href={ROUTES.reference}>Consult the reference</Link> to learn
-						more about <code>HandshakeOptions</code>.
+						about <code>HandshakeOptions</code>.
 					</p>
 				</section>
 

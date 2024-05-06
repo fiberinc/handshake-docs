@@ -36,7 +36,7 @@ export default async function Page() {
 						textWrap: 'balance',
 					}}
 				>
-					Get access tokens for 200+ services
+					Obtain access tokens to 200+ services
 				</h1>
 				<Text className="text-contrast text-md mb-4 antialiased md:text-2xl">
 					{/* Handshake is an OAuth handler that gets you access tokens to your

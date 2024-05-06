@@ -1,6 +1,7 @@
 import { Config } from 'tailwindcss';
 
 const config: Config = {
+	darkMode: 'selector',
 	content: ['./app/**/*.{js,ts,jsx,tsx}', './ui/**/*.{js,ts,jsx,tsx}'],
 	theme: {
 		fontFamily: {
@@ -162,8 +163,10 @@ const config: Config = {
 							fontVariantLigatures: 'none',
 						},
 						pre: {
-							// color: theme('colors.gray.50'),
-							borderRadius: theme('5px'),
+							borderRadius: '13px',
+							// borderBottomRightRadius: '8px',
+							// borderBottomLeftRadius: '8px',
+							backgroundColor: theme('colors.gray.900'),
 							padding: theme('padding.5'),
 							boxShadow: theme('boxShadow.md'),
 							border: `1px solid ${theme('borderColor.primary')}`,

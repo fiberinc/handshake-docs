@@ -14,7 +14,6 @@ export interface Provider {
 	troubleshoot: string | null;
 	configuration: string;
 	usage: string;
-	hasLogo?: boolean;
 }
 
 function makeProviderUsage(provider: ProviderInput): string {
@@ -51,7 +50,6 @@ export async function getProvider(
 		title: base.title,
 		docsUrl: base.docsUrl,
 		website: base.website,
-		hasLogo: !PROVIDERS_WITHOUT_LOGOS.includes(base.id),
 		configuration: base.configuration || makeProviderUsage(base),
 		troubleshoot: base.troubleshoot,
 		setup: base.setup,
@@ -75,7 +73,6 @@ export async function getProviders(): Promise<Provider[]> {
 			title: base.title,
 			website: base.website,
 			docsUrl: base.docsUrl,
-			hasLogo: !PROVIDERS_WITHOUT_LOGOS.includes(base.id),
 			configuration: base.configuration || makeProviderUsage(base),
 			troubleshoot: base.troubleshoot,
 			setup: base.setup,
@@ -84,10 +81,3 @@ export async function getProviders(): Promise<Provider[]> {
 		};
 	});
 }
-
-export const PROVIDERS_WITHOUT_LOGOS =
-	'aweber acton acuityscheduling alchemer arcgis assembla authing axosoft bungie clio concur constantcontact crossid delivery deputy echosign ecwid egnyte familysearch freeagent geeklist getbase hellosign huddle idme idonethis infusionsoft jamendo mailup mailru mailxpert mapmyfitness mastodon moxtra nokotime onelogin openstreetmap2 projectplace qq redbooth runkeeper sellsy shoeboxed smartsheet socialpilot socrata stocktwits stormz surveysparrow ticketbud timely traxo tripit united-effects vend verticalresponse viadeo weekdone withings zitadel'.split(
-		' '
-	);
-
-// REMOVED because they're ugly: viadeo runkeeper zitadel arcgis egnyte
