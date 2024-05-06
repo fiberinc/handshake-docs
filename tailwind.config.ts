@@ -41,46 +41,11 @@ const config: Config = {
 			},
 			fontSize: {
 				xs: '13px',
-				sm: '14px',
+				sm: '15px',
 				base: '16px',
 				lg: '18px',
 				'3xl': '28px',
 				'4xl': '35px',
-				label: [
-					'12px',
-					{
-						lineHeight: '16px',
-						fontWeight: '400',
-					},
-				],
-				body: [
-					'14px',
-					{
-						lineHeight: '20px',
-						fontWeight: '400',
-					},
-				],
-				'section-header': [
-					'30px',
-					{
-						lineHeight: '38px',
-						fontWeight: '500',
-					},
-				],
-				header: [
-					'36px',
-					{
-						lineHeight: '40px',
-						fontWeight: '500',
-					},
-				],
-				'monospace-body': [
-					'14px',
-					{
-						lineHeight: '20px',
-						fontWeight: '400',
-					},
-				],
 			},
 			typography: (theme: any) => ({
 				// We also have md.css styling the Markdown. It's better to use it here
@@ -93,7 +58,7 @@ const config: Config = {
 					css: {
 						maxWidth: 'none',
 						color: theme('colors.default'),
-						// fontSize: theme('fontSize.xs')[0],
+						// fontSize: theme('fontSize.base')[0],
 						fontSize: '18px',
 						hr: {
 							// borderColor: theme('colors.gray.100'),
@@ -144,7 +109,7 @@ const config: Config = {
 							...theme('fontSize.sm')[1],
 						},
 						'h1, h2, h3, h4': {
-							'scroll-margin-top': 'var(--scroll-mt)',
+							// 'scroll-margin-top': 'var(--scroll-mt)',
 						},
 						ul: {
 							listStyleType: 'none',

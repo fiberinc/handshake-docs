@@ -2,12 +2,12 @@
 
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import { ProviderInfo } from '~/lib/providers';
+import { Provider } from '~/lib/providers';
 import { ROUTES } from '~/lib/routes';
 import { ProviderLogo } from '~/ui';
 
 interface Props {
-	infos: ProviderInfo[];
+	infos: Provider[];
 }
 
 function ProviderGrid_({ infos }: Props) {

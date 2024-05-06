@@ -10,6 +10,7 @@ export type TextVariant =
 	| 'h3'
 	| 'h4'
 	| 's2'
+	| 'pretitle'
 	| 'subtitle'
 	| 'body'
 	| 'small'
@@ -31,6 +32,7 @@ const textClasses = cva('relative block', {
 				'text-2xl lg:text-3xl text-contrast font-medium leading-[1.2] md:leading-snug md',
 			],
 			h3: ['text-xl font-normal leading-normal text-contrast'],
+			pretitle: ['text-base leading-normal font-medium'],
 			s2: ['text-[18px] leading-normal font-normal'],
 			h4: ['text-lg text-contrast leading-normal'],
 			body: ['text-base leading-normal'],

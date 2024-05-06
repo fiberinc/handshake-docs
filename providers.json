@@ -1,2018 +1,2678 @@
 [
   {
     "id": "aweber",
-    "name": "AWeber",
+    "objectName": "AWeber",
     "title": "AWeber",
     "website": "https://www.aweber.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "acton",
-    "name": "ActOn",
+    "objectName": "ActOn",
     "title": "Act-On",
     "website": "https://www.act-on.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "acuityscheduling",
-    "name": "AcuityScheduling",
+    "objectName": "AcuityScheduling",
     "title": "Acuity Scheduling",
     "website": "https://acuityscheduling.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "adobe",
-    "name": "Adobe",
+    "objectName": "Adobe",
     "title": "Adobe",
     "website": "https://www.adobe.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "aha",
-    "name": "Aha",
+    "objectName": "Aha",
     "title": "Aha!",
     "website": "https://www.aha.io",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "alchemer",
-    "name": "Alchemer",
+    "objectName": "Alchemer",
     "title": "Alchemer",
     "website": "https://www.alchemer.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
-  },
-  {
-    "id": "amazon",
-    "name": "Amazon",
-    "title": "Amazon",
-    "website": "https://www.amazon.com",
-    "isFromNextAuth": false,
-    "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "amazon-seller",
-    "name": "AmazonSeller",
+    "objectName": "AmazonSeller",
     "title": "Amazon Seller Central",
     "website": "https://sellercentral.amazon.com/",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": "[\"Website authorization workflow\"\ndocumentation](https://developer-docs.amazon.com/sp-api/docs/website-authorization-workflow)\n\n## Usage\n\nProvide the following arguments:\n\n\n```ts title=\"app/options.ts\"\nimport { Amazon } from \"handshake\";\n\nimport { HandshakeOptions, Amazon } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Amazon({\n      appId: string,\n      clientId: string,\n      clientSecret: string,\n      isDraftApp: true | false,\n    });\n  ],\n  // ...\n};\n```\n\n\n## Troubleshooting\n\nNeed to \"set up your “Authorize” buttons so that selling partners are\nredirected to the Seller Central (for sellers) or Vendor Central (for\nvendors) sign-in page for their own region.\"\n\n### No localhost redirect\n\nAmazon does not allow setting localhost as a \n`redirect_uri`\n. You may want to\nuse Ngrok or another service to provide a publicly addressable URL.\n\n[https://github.com/amzn/selling-partner-api-docs/issues/26](https://github.com/amzn/selling-partner-api-docs/issues/26)\n\n### Error Code: MD5101\n\nThis means unauthorized redirect URI. localhost URIs are allowed.\n\n### Developer Central – \"You do not have permissions to view this page\"\n\nFYI. Only the primary user of the Seller Central account is able to create\nand modify apps via the \"Developer Central\" page.\n\n[https://github.com/amzn/selling-partner-api-docs/issues/2191](https://github.com/amzn/selling-partner-api-docs/issues/2191)\n\n### Not setup for OAuth\n\n![amazon-not-setup](https://handshake.cool/images/docs/amazon-not-setup-oauth.png)"
+    "docsUrl": "https://developer-docs.amazon.com/sp-api/docs/website-authorization-workflow",
+    "usage": "```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Amazon } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Amazon({\n      appId: string,\n      clientId: string,\n      clientSecret: string,\n      isDraftApp: true | false,\n    });\n  ],\n  // ...\n};\n```",
+    "troubleshoot": "Need to \"set up your “Authorize” buttons so that selling partners are\nredirected to the Seller Central (for sellers) or Vendor Central (for\nvendors) sign-in page for their own region.\"\n\n### No localhost redirect\n\nAmazon does not allow setting localhost as a \n`redirect_uri`\n. You may want to\nuse Ngrok or another service to provide a publicly addressable URL.\n\n[https://github.com/amzn/selling-partner-api-docs/issues/26](https://github.com/amzn/selling-partner-api-docs/issues/26)\n\n### Error Code: MD5101\n\nThis means unauthorized redirect URI. localhost URIs are allowed.\n\n### Developer Central – \"You do not have permissions to view this page\"\n\nFYI. Only the primary user of the Seller Central account is able to create\nand modify apps via the \"Developer Central\" page.\n\n[https://github.com/amzn/selling-partner-api-docs/issues/2191](https://github.com/amzn/selling-partner-api-docs/issues/2191)\n\n### Not setup for OAuth\n\n![amazon-not-setup](/images/docs/amazon/not-setup-oauth.png)",
+    "summary": ""
   },
   {
     "id": "angellist",
-    "name": "AngelList",
+    "objectName": "AngelList",
     "title": "AngelList",
     "website": "https://angel.co",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "apple",
-    "name": "Apple",
+    "objectName": "Apple",
     "title": "Apple",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "arcgis",
-    "name": "ArcGIS",
+    "objectName": "ArcGIS",
     "title": "ArcGIS",
     "website": "https://www.arcgis.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "asana",
-    "name": "Asana",
+    "objectName": "Asana",
     "title": "Asana",
     "website": "https://asana.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "assembla",
-    "name": "Assembla",
+    "objectName": "Assembla",
     "title": "Assembla",
     "website": "https://www.assembla.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "atlassian",
-    "name": "Atlassian",
+    "objectName": "Atlassian",
     "title": "Atlassian",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "auth0",
-    "name": "Auth0",
+    "objectName": "Auth0",
     "title": "Auth0",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "authing",
-    "name": "Authing",
+    "objectName": "Authing",
     "title": "Authing",
     "website": "https://www.authing.cn",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "autodesk",
-    "name": "Autodesk",
+    "objectName": "Autodesk",
     "title": "Autodesk",
     "website": "https://www.autodesk.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "axosoft",
-    "name": "Axosoft",
+    "objectName": "Axosoft",
     "title": "Axosoft",
     "website": "https://www.axosoft.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "azure-ad",
-    "name": "AzureAd",
+    "objectName": "AzureAd",
     "title": "Azure Active Directory",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "azure-ad-b2c",
-    "name": "AzureAdB2C",
+    "objectName": "AzureAdB2C",
     "title": "Azure Active Directory B2C",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "baidu",
-    "name": "Baidu",
+    "objectName": "Baidu",
     "title": "Baidu",
     "website": "https://www.baidu.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "basecamp",
-    "name": "Basecamp",
+    "objectName": "Basecamp",
     "title": "Basecamp",
     "website": "https://basecamp.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "battlenet",
-    "name": "Battlenet",
+    "objectName": "Battlenet",
     "title": "Battle.net",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "beatport",
-    "name": "Beatport",
+    "objectName": "Beatport",
     "title": "Beatport",
     "website": "https://www.beatport.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "bitbucket",
-    "name": "Bitbucket",
+    "objectName": "Bitbucket",
     "title": "Bitbucket",
     "website": "https://bitbucket.org",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "bitly",
-    "name": "Bitly",
+    "objectName": "Bitly",
     "title": "Bitly",
     "website": "https://bitly.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "box",
-    "name": "Box",
+    "objectName": "Box",
     "title": "Box",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "buffer",
-    "name": "Buffer",
+    "objectName": "Buffer",
     "title": "Buffer",
     "website": "https://bufferapp.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "bungie",
-    "name": "Bungie",
+    "objectName": "Bungie",
     "title": "Bungie",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "cas",
-    "name": "CAS",
+    "objectName": "CAS",
     "title": "CAS",
     "website": "https://www.apereo.org/projects/cas",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "campaignmonitor",
-    "name": "CampaignMonitor",
+    "objectName": "CampaignMonitor",
     "title": "Campaign Monitor",
     "website": "https://www.campaignmonitor.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "clio",
-    "name": "Clio",
+    "objectName": "Clio",
     "title": "Clio",
     "website": "https://www.clio.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "cognito",
-    "name": "Cognito",
+    "objectName": "Cognito",
     "title": "Cognito",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "coinbase",
-    "name": "Coinbase",
+    "objectName": "Coinbase",
     "title": "Coinbase",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "concur",
-    "name": "Concur",
+    "objectName": "Concur",
     "title": "Concur",
     "website": "https://www.concur.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "constantcontact",
-    "name": "ConstantContact",
+    "objectName": "ConstantContact",
     "title": "Constant Contact",
     "website": "https://www.constantcontact.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "coursera",
-    "name": "Coursera",
+    "objectName": "Coursera",
     "title": "Coursera",
     "website": "https://www.coursera.org",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "crossid",
-    "name": "CrossID",
+    "objectName": "CrossID",
     "title": "CrossID",
     "website": "https://www.crossid.io",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "dailymotion",
-    "name": "Dailymotion",
+    "objectName": "Dailymotion",
     "title": "Dailymotion",
     "website": "https://www.dailymotion.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "deezer",
-    "name": "Deezer",
+    "objectName": "Deezer",
     "title": "Deezer",
     "website": "https://www.deezer.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "delivery",
-    "name": "Delivery",
+    "objectName": "Delivery",
     "title": "Delivery",
     "website": "https://www.delivery.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "deputy",
-    "name": "Deputy",
+    "objectName": "Deputy",
     "title": "Deputy",
     "website": "https://www.deputy.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "deviantart",
-    "name": "DeviantArt",
+    "objectName": "DeviantArt",
     "title": "DeviantArt",
     "website": "https://www.deviantart.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "digitalocean",
-    "name": "DigitalOcean",
+    "objectName": "DigitalOcean",
     "title": "DigitalOcean",
     "website": "https://www.digitalocean.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "discogs",
-    "name": "Discogs",
+    "objectName": "Discogs",
     "title": "Discogs",
     "website": "https://www.discogs.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "discord",
-    "name": "Discord",
+    "objectName": "Discord",
     "title": "Discord",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "disqus",
-    "name": "Disqus",
+    "objectName": "Disqus",
     "title": "Disqus",
     "website": "https://www.disqus.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "docusign",
-    "name": "Docusign",
+    "objectName": "Docusign",
     "title": "DocuSign",
     "website": "https://www.docusign.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "dribbble",
-    "name": "Dribbble",
+    "objectName": "Dribbble",
     "title": "Dribbble",
     "website": "https://www.dribbble.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "dropbox",
-    "name": "Dropbox",
+    "objectName": "Dropbox",
     "title": "Dropbox",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "ebay",
-    "name": "Ebay",
+    "objectName": "Ebay",
     "title": "eBay",
     "website": "https://www.ebay.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "echosign",
-    "name": "Echosign",
+    "objectName": "Echosign",
     "title": "Adobe Sign",
     "website": "https://acrobat.adobe.com/us/en/sign.html",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "ecwid",
-    "name": "Ecwid",
+    "objectName": "Ecwid",
     "title": "Ecwid",
     "website": "https://www.ecwid.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "egnyte",
-    "name": "Egnyte",
+    "objectName": "Egnyte",
     "title": "Egnyte",
     "website": "https://www.egnyte.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "etsy",
-    "name": "Etsy",
+    "objectName": "Etsy",
     "title": "Etsy",
     "website": "https://www.etsy.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "eventbrite",
-    "name": "Eventbrite",
+    "objectName": "Eventbrite",
     "title": "Eventbrite",
     "website": "https://www.eventbrite.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "eveonline",
-    "name": "Eveonline",
+    "objectName": "Eveonline",
     "title": "EVE Online",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "evernote",
-    "name": "Evernote",
+    "objectName": "Evernote",
     "title": "Evernote",
     "website": "https://www.evernote.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "eyeem",
-    "name": "EyeEm",
+    "objectName": "EyeEm",
     "title": "EyeEm",
     "website": "https://www.eyeem.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "facebook",
-    "name": "Facebook",
+    "objectName": "Facebook",
     "title": "Facebook",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "faceit",
-    "name": "Faceit",
+    "objectName": "Faceit",
     "title": "FACEIT",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "faire",
-    "name": "Faire",
+    "objectName": "Faire",
     "title": "Faire",
     "website": "https://faire.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": "Connect to your customers' [Faire](https://faire.com) accounts.\n\n## Usage\n\nProvide the following arguments:\n\n\n```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Faire } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Faire({\n      clientId: process.env.FAIRE_CLIENT_ID!, // string\n      clientSecret: process.env.FAIRE_CLIENT_SECRET!, // string\n      scopes: [\"READ_BRAND\"], // FaireScope[]\n    }),\n  ],\n  // ...\n};\n```\n\n\nNote that Faire uses the \"Application ID\" and \"Secret ID\" as the client ID\nand client secret in the OAuth flow.\n\n## Setup\n\n[Documentation](https://faire.github.io/external-api-v2-docs/#using-oauth)\n\n![faire-credentials](https://handshake.cool/images/docs/faire-creds.png)"
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": "Connect to your customers' [Faire](https://faire.com) accounts.\n\n## Usage\n\nProvide the following arguments:\n\n\n```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Faire } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Faire({\n      clientId: process.env.FAIRE_CLIENT_ID!, // string\n      clientSecret: process.env.FAIRE_CLIENT_SECRET!, // string\n      scopes: [\"READ_BRAND\"], // FaireScope[]\n    }),\n  ],\n  // ...\n};\n```\n\n\nNote that Faire uses the \"Application ID\" and \"Secret ID\" as the client ID\nand client secret in the OAuth flow.\n\n## Setup\n\n[Documentation](https://faire.github.io/external-api-v2-docs/#using-oauth)\n\n[Support article](https://www.faire.com/support/articles/4409994540571)\n\n![faire-credentials](/images/docs/faire-creds.png)"
   },
   {
     "id": "familysearch",
-    "name": "FamilySearch",
+    "objectName": "FamilySearch",
     "title": "FamilySearch",
     "website": "https://www.familysearch.org",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "feedly",
-    "name": "Feedly",
+    "objectName": "Feedly",
     "title": "Feedly",
     "website": "https://www.feedly.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "figma",
-    "name": "Figma",
+    "objectName": "Figma",
     "title": "Figma",
     "website": "https://www.figma.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "fitbit",
-    "name": "Fitbit",
+    "objectName": "Fitbit",
     "title": "Fitbit",
     "website": "https://www.fitbit.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "flickr",
-    "name": "Flickr",
+    "objectName": "Flickr",
     "title": "Flickr",
     "website": "https://www.flickr.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "formstack",
-    "name": "Formstack",
+    "objectName": "Formstack",
     "title": "Formstack",
     "website": "https://www.formstack.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "42-school",
-    "name": "FortyTwo",
+    "objectName": "FortyTwo",
     "title": "42 School",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "foursquare",
-    "name": "Foursquare",
+    "objectName": "Foursquare",
     "title": "Foursquare",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "freeagent",
-    "name": "FreeAgent",
+    "objectName": "FreeAgent",
     "title": "FreeAgent",
     "website": "https://www.freeagent.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "freelancer",
-    "name": "Freelancer",
+    "objectName": "Freelancer",
     "title": "Freelancer",
     "website": "https://www.freelancer.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "freshbooks",
-    "name": "Freshbooks",
+    "objectName": "Freshbooks",
     "title": "Freshbooks",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "fusionauth",
-    "name": "Fusionauth",
+    "objectName": "Fusionauth",
     "title": "FusionAuth",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "garmin",
-    "name": "Garmin",
+    "objectName": "Garmin",
     "title": "Garmin",
     "website": "https://connect.garmin.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "geeklist",
-    "name": "Geeklist",
+    "objectName": "Geeklist",
     "title": "Geeklist",
     "website": "https://geekli.st",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "genius",
-    "name": "Genius",
+    "objectName": "Genius",
     "title": "Genius",
     "website": "https://genius.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "getbase",
-    "name": "Getbase",
+    "objectName": "Getbase",
     "title": "Getbase",
     "website": "https://www.getbase.com/sell/",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "github",
-    "name": "GitHub",
+    "objectName": "GitHub",
     "title": "GitHub",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "gitbook",
-    "name": "Gitbook",
+    "objectName": "Gitbook",
     "title": "GitBook",
     "website": "https://www.gitbook.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "gitlab",
-    "name": "Gitlab",
+    "objectName": "Gitlab",
     "title": "GitLab",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "goodreads",
-    "name": "Goodreads",
+    "objectName": "Goodreads",
     "title": "Goodreads",
     "website": "https://www.goodreads.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "google",
-    "name": "Google",
+    "objectName": "Google",
     "title": "Google",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "groove",
-    "name": "Groove",
+    "objectName": "Groove",
     "title": "Groove",
     "website": "https://www.groovehq.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "gumroad",
-    "name": "Gumroad",
+    "objectName": "Gumroad",
     "title": "Gumroad",
     "website": "https://gumroad.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "harvest",
-    "name": "Harvest",
+    "objectName": "Harvest",
     "title": "Harvest",
     "website": "https://www.getharvest.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "hellosign",
-    "name": "HelloSign",
+    "objectName": "HelloSign",
     "title": "HelloSign",
     "website": "https://www.hellosign.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "heroku",
-    "name": "Heroku",
+    "objectName": "Heroku",
     "title": "Heroku",
     "website": "https://www.heroku.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "homeaway",
-    "name": "Homeaway",
+    "objectName": "Homeaway",
     "title": "HomeAway",
     "website": "https://www.homeaway.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "hootsuite",
-    "name": "Hootsuite",
+    "objectName": "Hootsuite",
     "title": "Hootsuite",
     "website": "https://hootsuite.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "hubspot",
-    "name": "Hubspot",
+    "objectName": "Hubspot",
     "title": "HubSpot",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": "## Usage\n\nProvide the following arguments:\n\n\n```ts\n// Inside app/options.ts\n\nimport { Hubspot } from \"handshake\";\n\nHubspot({\n  clientId: string,\n  clientSecret: string,\n  scopes: [\n    \"e-commerce\",\n    \"crm.schemas.contacts.read\",\n    \"crm.objects.contacts.read\",\n  ],\n});\n```\n\n\n### Configure the Callback URL\n\nMake sure your Handshake URL is allowed within your Hubspot app's Auth tab:\n\n![hubspot-redirect-settings](https://handshake.cool/images/docs/hubspot-redirect.png)\n\nFollow the format: \n`https://HANDSHAKE_URL/auth/hubspot/callback`"
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": "## Usage\n\nProvide the following arguments:\n\n\n```ts\n// Inside app/options.ts\n\nimport { Hubspot } from \"handshake\";\n\nHubspot({\n  clientId: string,\n  clientSecret: string,\n  scopes: [\n    \"e-commerce\",\n    \"crm.schemas.contacts.read\",\n    \"crm.objects.contacts.read\",\n  ],\n});\n```\n\n\n### Configure the Callback URL\n\nMake sure your Handshake URL is allowed within your Hubspot app's Auth tab:\n\n![hubspot-redirect-settings](/images/docs/hubspot-redirect.png)\n\nFollow the format: \n`https://HANDSHAKE_URL/auth/hubspot/callback`"
   },
   {
     "id": "huddle",
-    "name": "Huddle",
+    "objectName": "Huddle",
     "title": "Huddle",
     "website": "https://www.huddle.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "ibm",
-    "name": "IBM",
+    "objectName": "IBM",
     "title": "IBM",
     "website": "https://www.ibm.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "idme",
-    "name": "IDme",
+    "objectName": "IDme",
     "title": "ID.me",
     "website": "https://www.id.me",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "idonethis",
-    "name": "IDoneThis",
+    "objectName": "IDoneThis",
     "title": "I Done This",
     "website": "https://home.idonethis.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "iconfinder",
-    "name": "Iconfinder",
+    "objectName": "Iconfinder",
     "title": "Iconfinder",
     "website": null,
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "imgur",
-    "name": "Imgur",
+    "objectName": "Imgur",
     "title": "Imgur",
     "website": "https://imgur.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "infusionsoft",
-    "name": "Infusionsoft",
+    "objectName": "Infusionsoft",
     "title": "Infusionsoft",
     "website": "https://www.infusionsoft.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "instagram",
-    "name": "Instagram",
+    "objectName": "Instagram",
     "title": "Instagram",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "intuit",
-    "name": "Intuit",
+    "objectName": "Intuit",
     "title": "Intuit",
     "website": "https://www.intuit.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "jamendo",
-    "name": "Jamendo",
+    "objectName": "Jamendo",
     "title": "Jamendo",
     "website": "https://www.jamendo.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "kakao",
-    "name": "Kakao",
+    "objectName": "Kakao",
     "title": "Kakao",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "keycloak",
-    "name": "Keycloak",
+    "objectName": "Keycloak",
     "title": "Keycloak",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "line",
-    "name": "Line",
+    "objectName": "Line",
     "title": "LINE",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "linkedin",
-    "name": "LinkedIn",
+    "objectName": "LinkedIn",
     "title": "LinkedIn",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "livechat",
-    "name": "LiveChat",
+    "objectName": "LiveChat",
     "title": "LiveChat",
     "website": "https://www.livechat.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "logingov",
-    "name": "LoginGOV",
+    "objectName": "LoginGOV",
     "title": "Login.gov",
     "website": "https://login.gov",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "lyft",
-    "name": "Lyft",
+    "objectName": "Lyft",
     "title": "Lyft",
     "website": "https://www.lyft.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "myob",
-    "name": "MYOB",
+    "objectName": "MYOB",
     "title": "MYOB",
     "website": "https://www.myob.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "mailup",
-    "name": "MailUp",
+    "objectName": "MailUp",
     "title": "MailUp",
     "website": "https://www.mailup.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "mailchimp",
-    "name": "Mailchimp",
+    "objectName": "Mailchimp",
     "title": "Mailchimp",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "mailru",
-    "name": "Mailru",
+    "objectName": "Mailru",
     "title": "Mail.ru",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "mailxpert",
-    "name": "Mailxpert",
+    "objectName": "Mailxpert",
     "title": "Mailxpert",
     "website": "https://www.mailxpert.ch",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "mapmyfitness",
-    "name": "MapMyFitness",
+    "objectName": "MapMyFitness",
     "title": "MapMyFitness",
     "website": "https://www.mapmyfitness.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "mastodon",
-    "name": "Mastodon",
+    "objectName": "Mastodon",
     "title": "Mastodon",
     "website": "https://joinmastodon.org",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "medium",
-    "name": "Medium",
+    "objectName": "Medium",
     "title": "Medium",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "meetup",
-    "name": "Meetup",
+    "objectName": "Meetup",
     "title": "Meetup",
     "website": "https://www.meetup.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "mendeley",
-    "name": "Mendeley",
+    "objectName": "Mendeley",
     "title": "Mendeley",
     "website": "https://www.mendeley.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "mention",
-    "name": "Mention",
+    "objectName": "Mention",
     "title": "Mention",
     "website": "https://mention.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "microsoft",
-    "name": "Microsoft",
+    "objectName": "Microsoft",
     "title": "Microsoft",
     "website": "https://www.microsoft.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "live",
-    "name": "MicrosoftLive",
+    "objectName": "MicrosoftLive",
     "title": "Microsoft Live",
     "website": "https://live.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "mixcloud",
-    "name": "Mixcloud",
+    "objectName": "Mixcloud",
     "title": "Mixcloud",
     "website": "https://www.mixcloud.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "monday",
-    "name": "Monday",
+    "objectName": "Monday",
     "title": "Monday",
     "website": "https://monday.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": "Connect to your customers' [Monday](https://monday.com) accounts.\n\n## Usage\n\nProvide the following arguments:\n\n\n```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Monday } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Monday({\n      clientId: process.env.MONDAY_CLIENT_ID!, // string\n      clientSecret: process.env.MONDAY_CLIENT_SECRET!, // string\n      scopes: [\"account:read\"], // MondayScope[]\n    }),\n  ],\n  // ...\n};\n```\n\n\n## Setup\n\n[Documentation](https://developer.monday.com/apps/docs/oauth)\n\n![monday-credentials](https://handshake.cool/images/docs/monday-creds.png)\n![monday-credentials](https://handshake.cool/images/docs/monday-allow-redirect.png)\n\n## Troubleshooting\n\n### \"invalid_scope: Invalid scope param\"\n\nYou configured Handshake to request a scope that you didn't enable in your\napp's settings."
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": "Connect to your customers' [Monday](https://monday.com) accounts.\n\n## Usage\n\nProvide the following arguments:\n\n\n```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Monday } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Monday({\n      clientId: process.env.MONDAY_CLIENT_ID!, // string\n      clientSecret: process.env.MONDAY_CLIENT_SECRET!, // string\n      scopes: [\"account:read\"], // MondayScope[]\n    }),\n  ],\n  // ...\n};\n```\n\n\n## Setup\n\n[Documentation](https://developer.monday.com/apps/docs/oauth)\n\n![monday-credentials](/images/docs/monday-creds.png)\n![monday-credentials](/images/docs/monday-allow-redirect.png)\n\n## Troubleshooting\n\n### \"invalid_scope: Invalid scope param\"\n\nYou configured Handshake to request a scope that you didn't enable in your\napp's settings."
   },
   {
     "id": "moxtra",
-    "name": "Moxtra",
+    "objectName": "Moxtra",
     "title": "Moxtra",
     "website": "https://www.moxtra.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "naver",
-    "name": "Naver",
+    "objectName": "Naver",
     "title": "Naver",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "nest",
-    "name": "Nest",
+    "objectName": "Nest",
     "title": "Nest",
     "website": "https://www.nest.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "netlify",
-    "name": "Netlify",
+    "objectName": "Netlify",
     "title": "Netlify",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "nokotime",
-    "name": "NokoTime",
+    "objectName": "NokoTime",
     "title": "NokoTime",
     "website": "https://www.nokotime.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "notion",
-    "name": "Notion",
+    "objectName": "Notion",
     "title": "Notion",
     "website": "https://www.notion.so",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "nylas",
-    "name": "Nylas",
+    "objectName": "Nylas",
     "title": "Nylas",
     "website": "https://www.nylas.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "okta",
-    "name": "Okta",
+    "objectName": "Okta",
     "title": "Okta",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "onelogin",
-    "name": "Onelogin",
+    "objectName": "Onelogin",
     "title": "OneLogin",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "openstreetmap2",
-    "name": "OpenStreetMap2",
+    "objectName": "OpenStreetMap2",
     "title": "OpenStreetMap",
     "website": "https://www.openstreetmap.org",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "optimizely",
-    "name": "Optimizely",
+    "objectName": "Optimizely",
     "title": "Optimizely",
     "website": "https://www.optimizely.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "osso",
-    "name": "Osso",
+    "objectName": "Osso",
     "title": "Osso",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "osu",
-    "name": "Osu",
+    "objectName": "Osu",
     "title": "Osu!",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "passage",
-    "name": "Passage",
+    "objectName": "Passage",
     "title": "Passage",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "patreon",
-    "name": "Patreon",
+    "objectName": "Patreon",
     "title": "Patreon",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "paypal",
-    "name": "PayPal",
+    "objectName": "PayPal",
     "title": "PayPal",
     "website": "https://www.paypal.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "pinterest",
-    "name": "Pinterest",
+    "objectName": "Pinterest",
     "title": "Pinterest",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "pipedrive",
-    "name": "Pipedrive",
+    "objectName": "Pipedrive",
     "title": "Pipedrive",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "plurk",
-    "name": "Plurk",
+    "objectName": "Plurk",
     "title": "Plurk",
     "website": "https://www.plurk.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "pocket",
-    "name": "Pocket",
+    "objectName": "Pocket",
     "title": "Pocket",
     "website": "https://getpocket.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "podio",
-    "name": "Podio",
+    "objectName": "Podio",
     "title": "Podio",
     "website": "https://www.podio.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "procore",
-    "name": "Procore",
+    "objectName": "Procore",
     "title": "Procore",
     "website": "https://www.procore.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "producthunt",
-    "name": "ProductHunt",
+    "objectName": "ProductHunt",
     "title": "Product Hunt",
     "website": "https://www.producthunt.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "projectplace",
-    "name": "Projectplace",
+    "objectName": "Projectplace",
     "title": "Projectplace",
     "website": "https://www.projectplace.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "pushbullet",
-    "name": "Pushbullet",
+    "objectName": "Pushbullet",
     "title": "Pushbullet",
     "website": "https://pushbullet.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "qq",
-    "name": "Qq",
+    "objectName": "Qq",
     "title": "Qq",
     "website": "https://qq.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "ravelry",
-    "name": "Ravelry",
+    "objectName": "Ravelry",
     "title": "Ravelry",
     "website": "https://ravelry.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "redbooth",
-    "name": "Redbooth",
+    "objectName": "Redbooth",
     "title": "Redbooth",
     "website": "https://redbooth.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "reddit",
-    "name": "Reddit",
+    "objectName": "Reddit",
     "title": "Reddit",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "runkeeper",
-    "name": "Runkeeper",
+    "objectName": "Runkeeper",
     "title": "Runkeeper",
     "website": "https://runkeeper.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "salesforce",
-    "name": "Salesforce",
+    "objectName": "Salesforce",
     "title": "Salesforce",
     "website": "https://salesforce.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": "## Usage\n\nProvide the following arguments:\n\n\n```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Salesforce } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Salesforce({\n      clientId: string,\n      clientSecret: string,\n      scopes: string[],\n      issuer?: string,\n    }),\n  ],\n  // ...\n};\n```\n\n\n[Scope documentation](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_tokens_scopes.htm&type=5)"
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": "## Usage\n\nProvide the following arguments:\n\n\n```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Salesforce } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Salesforce({\n      clientId: string,\n      clientSecret: string,\n      scopes: string[],\n      issuer?: string,\n    }),\n  ],\n  // ...\n};\n```\n\n\n[Scope documentation](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_tokens_scopes.htm&type=5)"
   },
   {
     "id": "sellsy",
-    "name": "Sellsy",
+    "objectName": "Sellsy",
     "title": "Sellsy",
     "website": "https://sellsy.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "shoeboxed",
-    "name": "Shoeboxed",
+    "objectName": "Shoeboxed",
     "title": "Shoeboxed",
     "website": "https://shoeboxed.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "shopify",
-    "name": "Shopify",
+    "objectName": "Shopify",
     "title": "Shopify",
     "website": "https://shopify.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": "## Usage\n\nProvide the following arguments:\n\n\n```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Shopify } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Shopify({\n      clientId: process.env.SHOPIFY_CLIENT_ID!,\n      clientSecret: process.env.SHOPIFY_CLIENT_SECRET!,\n      scopes: [\"read_orders\", \"read_products\"],\n    }),\n  ],\n  // ...\n};\n```\n\n\n## Redirection\n\nInclude an \n`extras.shop`\n parameter when redirecting users to Handshake:\n\n\n```ts\nhttps://HANDSHAKE_HOST/auth/shopify/redirect?\n  state=12345\n  &extras.shop=hahvaleu.myshopify.com\n  &callback_uri=http://YOUR_APP_HOST/shopifySyncSuccess\n```\n\n\n## Configure the Callback URL\n\nMake sure your Handshake URL is allowed within your Shopify app's\nConfiguration tab:\n\n![shopify-redirection](https://handshake.cool/images/docs/shopify-redirect.png)\n\nFollow the format: \n`https://HANDSHAKE_URL/auth/shopify/callback`"
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": "## Usage\n\nProvide the following arguments:\n\n\n```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Shopify } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Shopify({\n      clientId: process.env.SHOPIFY_CLIENT_ID!,\n      clientSecret: process.env.SHOPIFY_CLIENT_SECRET!,\n      scopes: [\"read_orders\", \"read_products\"],\n    }),\n  ],\n  // ...\n};\n```\n\n\n## Redirection\n\nInclude an \n`extras.shop`\n parameter when redirecting users to Handshake:\n\n\n```ts\nhttps://HANDSHAKE_HOST/auth/shopify/redirect?\n  state=12345\n  &extras.shop=hahvaleu.myshopify.com\n  &callback_uri=http://YOUR_APP_HOST/shopifySyncSuccess\n```\n\n\n## Configure the Callback URL\n\nMake sure your Handshake URL is allowed within your Shopify app's\nConfiguration tab:\n\n![shopify-redirection](/images/docs/shopify-redirect.png)\n\nFollow the format: \n`https://HANDSHAKE_URL/auth/shopify/callback`"
   },
   {
     "id": "slack",
-    "name": "Slack",
+    "objectName": "Slack",
     "title": "Slack",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "smartsheet",
-    "name": "Smartsheet",
+    "objectName": "Smartsheet",
     "title": "Smartsheet",
     "website": "https://smartsheet.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "smugmug",
-    "name": "Smugmug",
+    "objectName": "Smugmug",
     "title": "Smugmug",
     "website": "https://smugmug.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "snapchat",
-    "name": "Snapchat",
+    "objectName": "Snapchat",
     "title": "Snapchat",
     "website": "https://snapchat.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "snowflake",
-    "name": "Snowflake",
+    "objectName": "Snowflake",
     "title": "Snowflake",
     "website": "https://www.snowflake.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "socialpilot",
-    "name": "SocialPilot",
+    "objectName": "SocialPilot",
     "title": "SocialPilot",
     "website": "https://www.socialpilot.co",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "socrata",
-    "name": "Socrata",
+    "objectName": "Socrata",
     "title": "Socrata",
     "website": "https://www.socrata.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "soundcloud",
-    "name": "SoundCloud",
+    "objectName": "SoundCloud",
     "title": "SoundCloud",
     "website": "https://soundcloud.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "spotify",
-    "name": "Spotify",
+    "objectName": "Spotify",
     "title": "Spotify",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "square",
-    "name": "Square",
+    "objectName": "Square",
     "title": "Square",
     "website": "https://squareup.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "stackexchange",
-    "name": "StackExchange",
+    "objectName": "StackExchange",
     "title": "Stack Exchange",
     "website": "https://stackexchange.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "stocktwits",
-    "name": "Stocktwits",
+    "objectName": "Stocktwits",
     "title": "Stocktwits",
     "website": "https://stocktwits.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "stormz",
-    "name": "Stormz",
+    "objectName": "Stormz",
     "title": "Stormz",
     "website": "https://stormz.me",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "storyblok",
-    "name": "Storyblok",
+    "objectName": "Storyblok",
     "title": "Storyblok",
     "website": "https://www.storyblok.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "strava",
-    "name": "Strava",
+    "objectName": "Strava",
     "title": "Strava",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "stripe",
-    "name": "Stripe",
+    "objectName": "Stripe",
     "title": "Stripe",
     "website": "https://stripe.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": "## Usage\n\nProvide the following arguments:\n\n\n```ts title=\"app/options.ts\"\n\nimport { Stripe } from \"handshake\";\n\nStripe({\n  clientId: \"ca_\",\n  clientSecret: \"sk_\",\n  scopes: [],\n});\n```\n\n\n### Allow your Handshake callback URL\n\nIn your Stripe app settings.\n\nYou can set up a localhost callback by toggling the \"View test data\" switch.\n\n![stripe-callback-settings](https://handshake.cool/images/docs/stripe-redirect.png)"
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": "## Usage\n\nProvide the following arguments:\n\n\n```ts title=\"app/options.ts\"\n\nimport { Stripe } from \"handshake\";\n\nStripe({\n  clientId: \"ca_\",\n  clientSecret: \"sk_\",\n  scopes: [],\n});\n```\n\n\n### Allow your Handshake callback URL\n\nIn your Stripe app settings.\n\nYou can set up a localhost callback by toggling the \"View test data\" switch.\n\n![stripe-callback-settings](/images/docs/stripe-redirect.png)"
   },
   {
     "id": "surveymonkey",
-    "name": "SurveyMonkey",
+    "objectName": "SurveyMonkey",
     "title": "SurveyMonkey",
     "website": "https://www.surveymonkey.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "surveysparrow",
-    "name": "SurveysParrow",
+    "objectName": "SurveysParrow",
     "title": "SurveySparrow",
     "website": "https://surveysparrow.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "thingiverse",
-    "name": "Thingiverse",
+    "objectName": "Thingiverse",
     "title": "Thingiverse",
     "website": "https://www.thingiverse.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "ticketbud",
-    "name": "Ticketbud",
+    "objectName": "Ticketbud",
     "title": "Ticketbud",
     "website": "https://www.ticketbud.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "tiktok",
-    "name": "TikTok",
+    "objectName": "TikTok",
     "title": "TikTok",
     "website": "https://www.tiktok.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "timely",
-    "name": "Timely",
+    "objectName": "Timely",
     "title": "Timely",
     "website": "https://www.timelyapp.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "todoist",
-    "name": "Todoist",
+    "objectName": "Todoist",
     "title": "Todoist",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "trakt",
-    "name": "Trakt",
+    "objectName": "Trakt",
     "title": "Trakt",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "traxo",
-    "name": "Traxo",
+    "objectName": "Traxo",
     "title": "Traxo",
     "website": "https://www.traxo.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "trello",
-    "name": "Trello",
+    "objectName": "Trello",
     "title": "Trello",
     "website": "https://trello.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "tripit",
-    "name": "TripIt",
+    "objectName": "TripIt",
     "title": "TripIt",
     "website": "https://www.tripit.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "trustpilot",
-    "name": "Trustpilot",
+    "objectName": "Trustpilot",
     "title": "Trustpilot",
     "website": "https://www.trustpilot.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "tumblr",
-    "name": "Tumblr",
+    "objectName": "Tumblr",
     "title": "Tumblr",
     "website": "https://tumblr.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "twitch",
-    "name": "Twitch",
+    "objectName": "Twitch",
     "title": "Twitch",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "twitter",
-    "name": "Twitter",
+    "objectName": "Twitter",
     "title": "Twitter",
     "website": "https://twitter.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "typeform",
-    "name": "Typeform",
+    "objectName": "Typeform",
     "title": "Typeform",
     "website": "https://www.typeform.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "uber",
-    "name": "Uber",
+    "objectName": "Uber",
     "title": "Uber",
     "website": "https://www.uber.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "unbounce",
-    "name": "Unbounce",
+    "objectName": "Unbounce",
     "title": "Unbounce",
     "website": "https://www.unbounce.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "underarmour",
-    "name": "UnderArmour",
+    "objectName": "UnderArmour",
     "title": "Under Armour",
     "website": "https://www.underarmour.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "united-effects",
-    "name": "UnitedEffects",
+    "objectName": "UnitedEffects",
     "title": "United Effects",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "unsplash",
-    "name": "Unsplash",
+    "objectName": "Unsplash",
     "title": "Unsplash",
     "website": "https://unsplash.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "untappd",
-    "name": "Untappd",
+    "objectName": "Untappd",
     "title": "Untappd",
     "website": "https://untappd.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "upwork",
-    "name": "Upwork",
+    "objectName": "Upwork",
     "title": "Upwork",
     "website": "https://www.upwork.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "uservoice",
-    "name": "UserVoice",
+    "objectName": "UserVoice",
     "title": "UserVoice",
     "website": "https://www.uservoice.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "vend",
-    "name": "Vend",
+    "objectName": "Vend",
     "title": "Vend",
     "website": "https://www.vendhq.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "venmo",
-    "name": "Venmo",
+    "objectName": "Venmo",
     "title": "Venmo",
     "website": "https://venmo.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "vercel",
-    "name": "Vercel",
+    "objectName": "Vercel",
     "title": "Vercel",
     "website": "https://vercel.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "verticalresponse",
-    "name": "VerticalResponse",
+    "objectName": "VerticalResponse",
     "title": "VerticalResponse",
     "website": "https://www.verticalresponse.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "viadeo",
-    "name": "Viadeo",
+    "objectName": "Viadeo",
     "title": "Viadeo",
     "website": "https://www.viadeo.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "vimeo",
-    "name": "Vimeo",
+    "objectName": "Vimeo",
     "title": "Vimeo",
     "website": "https://vimeo.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "visualstudio",
-    "name": "VisualStudio",
+    "objectName": "VisualStudio",
     "title": "Visual Studio",
     "website": "https://visualstudio.microsoft.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "vk",
-    "name": "Vk",
+    "objectName": "Vk",
     "title": "VK",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "wechat",
-    "name": "WeChat",
+    "objectName": "WeChat",
     "title": "WeChat",
     "website": "https://wechat.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "weekdone",
-    "name": "Weekdone",
+    "objectName": "Weekdone",
     "title": "Weekdone",
     "website": "https://weekdone.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "weibo",
-    "name": "Weibo",
+    "objectName": "Weibo",
     "title": "Weibo",
     "website": "https://weibo.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "wikimedia",
-    "name": "Wikimedia",
+    "objectName": "Wikimedia",
     "title": "Wikimedia",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "withings",
-    "name": "Withings",
+    "objectName": "Withings",
     "title": "Withings",
     "website": "https://www.withings.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "wordpress",
-    "name": "Wordpress",
+    "objectName": "Wordpress",
     "title": "WordPress.com",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "workos",
-    "name": "WorkOS",
+    "objectName": "WorkOS",
     "title": "WorkOS",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "wrike",
-    "name": "Wrike",
+    "objectName": "Wrike",
     "title": "Wrike",
     "website": "https://www.wrike.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "xero",
-    "name": "Xero",
+    "objectName": "Xero",
     "title": "Xero",
     "website": "https://www.xero.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "xing",
-    "name": "Xing",
+    "objectName": "Xing",
     "title": "Xing",
     "website": "https://www.xing.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "yahoo",
-    "name": "Yahoo",
+    "objectName": "Yahoo",
     "title": "Yahoo",
     "website": "https://www.yahoo.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "yammer",
-    "name": "Yammer",
+    "objectName": "Yammer",
     "title": "Yammer",
     "website": "https://www.yammer.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "yandex",
-    "name": "Yandex",
+    "objectName": "Yandex",
     "title": "Yandex",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "zendesk",
-    "name": "Zendesk",
+    "objectName": "Zendesk",
     "title": "Zendesk",
     "website": "https://www.zendesk.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "zitadel",
-    "name": "Zitadel",
+    "objectName": "Zitadel",
     "title": "ZITADEL",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "zoho",
-    "name": "Zoho",
+    "objectName": "Zoho",
     "title": "Zoho",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "zoom",
-    "name": "Zoom",
+    "objectName": "Zoom",
     "title": "Zoom",
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "23andme",
-    "name": "_23andMe",
+    "objectName": "_23andMe",
     "title": "23andMe",
     "website": "https://www.23andme.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   },
   {
     "id": "500px",
-    "name": "_500PX",
+    "objectName": "_500PX",
     "title": "500px",
     "website": "https://500px.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docs": null
+    "docsUrl": "",
+    "usage": "",
+    "troubleshoot": "",
+    "summary": ""
   }
 ]

@@ -1,6 +1,6 @@
-import { HomeIcon } from '@radix-ui/react-icons';
+import { HomeIcon, TriangleUpIcon } from '@radix-ui/react-icons';
 import { FaCircle } from 'react-icons/fa';
-import { ProviderInfo, getProviders } from '~/lib/providers';
+import { Provider, getProviders } from '~/lib/providers';
 import { ROUTES } from '~/lib/routes';
 import { ProviderLogo } from '~/ui';
 import { SidebarLink } from '~/ui/SidebarLink';
@@ -10,7 +10,7 @@ export async function Sidebar() {
 	const providers = await getProviders();
 
 	return (
-		<div className="flex flex-col gap-8">
+		<div className="flex flex-col gap-8 max-w-full">
 			<section className="flex flex-col">
 				<Text className="font-normal mb-3 text-contrast">Basics</Text>
 				<SidebarLink
@@ -19,7 +19,15 @@ export async function Sidebar() {
 					label="Getting started"
 				/>
 			</section>
-			{/* <section className="flex flex-col">
+			<section className="flex flex-col">
+				<Text className="font-normal mb-3 text-contrast">Frameworks</Text>
+				<SidebarLink
+					href={ROUTES.framework.next}
+					icon={<img src="/images/next.svg" width={50} alt="Next.js logo" />}
+					label="Next.js"
+				/>
+			</section>
+			<section className="flex flex-col">
 				<Text className="font-normal mb-3 text-contrast">Providers</Text>
 				<ul className="flex flex-col gap-1">
 					{providers.map((provider) => {
@@ -30,12 +38,12 @@ export async function Sidebar() {
 						);
 					})}
 				</ul>
-			</section> */}
+			</section>
 		</div>
 	);
 }
 
-function SidebarProviderLink(info: ProviderInfo) {
+function SidebarProviderLink(info: Provider) {
 	return (
 		<SidebarLink
 			label={info.title}

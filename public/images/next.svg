@@ -1,0 +1,34 @@
+<svg width="122" height="122" viewBox="0 0 122 122" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    :root {--svg-color: black;}
+    @media (prefers-color-scheme: dark) {
+    :root { --svg-color: white; }
+    }
+</style>
+  <g clip-path="url(#clip0_2013_4)">
+    <g clip-path="url(#clip1_2013_4)">
+      <path
+        d="M117.508 125.52L37.142 22H22V93.97H34.1136V37.3836L107.999 132.845C111.333 130.614 114.509 128.165 117.508 125.52Z"
+        fill="url(#paint0_linear_2013_4)" />
+      <path d="M95 22H83V94H95V22Z" fill="url(#paint1_linear_2013_4)" />
+    </g>
+  </g>
+  <defs>
+    <linearGradient id="paint0_linear_2013_4" x1="77" y1="84.5" x2="112.5" y2="128.5"
+      gradientUnits="userSpaceOnUse">
+      <stop stop-color="var(--svg-color)" />
+      <stop offset="1" stop-color="var(--svg-color)" stop-opacity="0" />
+    </linearGradient>
+    <linearGradient id="paint1_linear_2013_4" x1="89" y1="22" x2="88.799" y2="74.875"
+      gradientUnits="userSpaceOnUse">
+      <stop stop-color="var(--svg-color)" />
+      <stop offset="1" stop-color="var(--svg-color)" stop-opacity="0" />
+    </linearGradient>
+    <clipPath id="clip0_2013_4">
+      <rect width="122" height="122" fill="var(--svg-color)" />
+    </clipPath>
+    <clipPath id="clip1_2013_4">
+      <rect width="146" height="146" fill="var(--svg-color)" transform="translate(-32 -32)" />
+    </clipPath>
+  </defs>
+</svg>

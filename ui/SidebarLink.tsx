@@ -20,12 +20,16 @@ export function SidebarLink({ icon, label, href }: SidebarLinkProps) {
 		<Link href={href}>
 			<div
 				className={twMerge(
-					'flex flex-row items-center justify-start gap-3 p-2 h-[40px] group',
+					'flex flex-row items-center justify-start gap-3 p-2 h-[40px] group w-full',
 					isActive && 'bg-red'
 				)}
 			>
-				<div className="w-[20px] flex justify-center">{icon}</div>
-				<Text className="transition group-hover:text-contrast">{label}</Text>
+				<div className="w-[20px] flex justify-center shrink-0">{icon}</div>
+				<div className="overflow-hidden">
+					<Text className="transition group-hover:text-contrast overflow-hidden whitespace-nowrap text-ellipsis">
+						{label}
+					</Text>
+				</div>
 			</div>
 		</Link>
 	);

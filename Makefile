@@ -1,7 +1,7 @@
 # Just run `make`.
 
 PWD=$(shell pwd)
-LIB_DIR=$(shell cd ../handshake && pwd)
+LIB_DIR=$(shell cd ../handshake/lib && pwd)
 ROOT_DIR=$(shell cd .. && pwd)
 
 run: typedoc-providers parse

@@ -1,93 +1,73 @@
 import { SerializeOptions } from 'next-mdx-remote/dist/types';
-import { serialize } from 'next-mdx-remote/serialize';
 import providers from '../providers.json';
 
-export interface ProviderInfo {
+export type ProviderInput = any;
+
+export interface Provider {
 	id: string;
+	objectName: string;
 	title: string;
 	website: string | null;
-	serialized?: null | any;
+	summary: string | any;
+	docsUrl: string;
+	troubleshoot: string | null;
+	usage: string;
 	hasLogo?: boolean;
 }
 
-async function getProviderDocs(
-	provider: any,
-	serializeOptions: SerializeOptions = { parseFrontmatter: true }
-): Promise<any> {
-	let providerDocs: string = provider.docs ?? '';
-	if (!providerDocs) {
-		providerDocs = `
-
-Connect to your customers&apos; ${provider.website ? `[${provider.title}](${provider.website})` : provider.title} accounts.
-
-## Usage
-
-Provide the following arguments:
-
+function makeProviderUsage(provider: ProviderInput): string {
+	return `
 \`\`\`ts title="app/options.ts"
-import { ${provider.name}, HandshakeOptions } from "handshake";
+import { ${provider.objectName}, HandshakeOptions } from "handshake";
 
 const config: HandshakeOptions = {
-handlers: [
-${provider.name}({
-  clientId: string,
-  clientSecret: string,${provider.takesSubdomainArg ? '\n      subdomain: string,' : ''}
-});
-],
+  handlers: [
+    ${provider.objectName}({
+      clientId: string,
+      clientSecret: string,${provider.takesSubdomainArg ? '\n      subdomain: string,' : ''}
+    });
+  ],
 }
 
 // ...
 \`\`\`
 
 ${provider.isFromNextAuth ? 'Adapted from [next-auth](https://github.com/nextauthjs/next-auth).' : ''}`;
-	}
-
-	return serialize(providerDocs, serializeOptions);
 }
 
-export async function getProviderWithDocs(
+export async function getProvider(
 	id: string,
 	options: SerializeOptions = { parseFrontmatter: true }
-): Promise<ProviderInfo | null> {
+): Promise<Provider | null> {
 	const base = providers.find((f) => f.id === id);
 	if (!base) {
 		return null;
 	}
 	return {
 		id: base.id,
+		objectName: base.objectName,
 		title: base.title,
+		docsUrl: base.docsUrl,
 		website: base.website,
 		hasLogo: !PROVIDERS_WITHOUT_LOGOS.includes(base.id),
-		serialized: await getProviderDocs(base, options),
+		usage: base.usage || makeProviderUsage(base),
+		troubleshoot: base.troubleshoot,
+		summary: base.summary,
+		// serialized: await getProviderDocs(base, options),
 	};
 }
 
-export async function getProvidersWithDocs(): Promise<ProviderInfo[]> {
-	const filteredProviders =
-		process.env.NODE_ENV === 'development' ? providers.slice(0, 20) : providers;
-
-	return await Promise.all(
-		filteredProviders.map(async (base): Promise<ProviderInfo> => {
-			return {
-				id: base.id,
-				title: base.title,
-				website: base.website,
-				hasLogo: !PROVIDERS_WITHOUT_LOGOS.includes(base.id),
-				serialized: await getProviderDocs(base),
-			};
-		})
-	);
-}
-
-export async function getProviders(): Promise<ProviderInfo[]> {
+export async function getProviders(): Promise<Provider[]> {
 	const filteredProviders =
 		process.env.NODE_ENV === 'development'
 			? providers.slice(0, 400)
 			: providers;
 
-	return filteredProviders.map((base): ProviderInfo => {
+	return filteredProviders.map((base): Provider => {
 		return {
+			...base,
 			id: base.id,
+			objectName: base.objectName,
 			title: base.title,
 			website: base.website,
 			hasLogo: !PROVIDERS_WITHOUT_LOGOS.includes(base.id),
