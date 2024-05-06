@@ -57,12 +57,12 @@ export async function Main({ provider }: Props) {
 					<pre>
 						<code>
 							https://YOUR_HANDSHAKE_INSTANCE_URL/auth/
-							<span className="text-green-400">PROVIDER_ID</span>
+							<span className="text-green-400">PROVIDER_ID</span>/redirect
 						</code>
 					</pre>
 					<p>
 						Where <code className="!text-green-400">PROVIDER_ID</code> is either{' '}
-						<code>{provider.id}</code> or the value you passed as the optional{' '}
+						<code>{provider.id}</code> or the value passed to the optional{' '}
 						<code>id</code> argument of the{' '}
 						<code>
 							{provider.objectName}({})

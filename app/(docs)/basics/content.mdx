@@ -4,51 +4,167 @@ title: Documentation
 subtitle: Learn how to get up and running with Handshake
 ---
 
-### Features:
 
-- **Type-safe**. Handshake is written in TypeScript and all providers have type definitions.
+# About
 
----
+Handshake helps you get OAuth tokens to your users' accounts in over 200 apps
+and services. It's an open-source Next.js app that you can easily configure and
+deploy.
 
-# Step-by-step guide
+See the [full list of providers][1].
 
-## Step 1: Create your Notion app
-You will need a Notion app
+# How it works
 
-[Visit the Notion docs](https://developers.notion.com/docs/authorization#public-integration-auth-flow-set-up) for the complete picture.
+Suppose you want to access your users' Salesforce data. You will need to your
+users for a Salesforce access token to communicate with the Salesforce API on
+their behalf. Handshake can help with you.
 
-![](/images/docs/notion/auth-docs.png)
+To acquire Salesforce credentials for a user, redirect them to:
 
-## Step 2: Setup Handshake
-	Configure
+```ts
+https://YOUR_HANDSHAKE_URL/auth/salesforce/redirect
+  ?state=123456&
+  &callback_uri=https://app.example.com/integrations
+```
 
+Where `YOUR_HANDSHAKE_URL` is something like `https://handshake.example.com` or
+wherever you want to host this app.
 
-## Step 3: Deploy to Vercel
+Handshake will then handle all the OAuth dance with Salesforce on your behalf.
+We will redirect the user to a Salesforce page where they can authorize your app
+to access their data. Salesforce will then redirect the user back to
+`YOUR_HANDSHAKE_URL`, from where we will redirect the user back to you.
 
-Use the [Vercel CLI](https://vercel.com/docs/cli) to deploy:
+# Setup
 
-\`\`\`bash
-my-handshake $ vercel deploy --prod
-Vercel CLI 33.5.2
-⠏ Deploying felipap/my-handshake
-🔍  Inspect: https://vercel.com/felipap/my-handshake/CgEBwu93GdmUbqyyUxqtSw [12s]
-✅  Production: https://my-handshake-b6vwdktl7-fiber.vercel.app [12s]
-⠇ Building
-\`\`\`
+Clone the project to your machine:
 
-## Step 4: Send users
+```bash
+git clone https://github.com/fiberinc/handshake.git
+```
 
-Your instance should now be ready to use.
+Install dependencies:
 
----
+```bash
+cd handshake
+pnpm i
+```
 
-# Frequently asked questions
+Build the project:
 
-## Can I merge Handshake into my existing app?
+```bash
+pnpm build
+```
 
-You're very welcome to try. We designed Handshake to be a standalone application, but you can try to copy-paste its code into your existing Next.js app. Keep in mind that this will make upgrades more difficult.
+## Set environment variables
 
+Duplicate the `.env.example` file within the app folder:
 
-## Can you host Handshake for me?
+```bash
+cp app/.env.example app/.env
+```
 
-Handshake was designed with self-hosting in mind. The team at Fiber can host.
+In the new file, replace the values for `ALLOWED_REDIRECT_HOST` and `SESSION_SECRET`.
+
+## Configure your providers
+
+Modify the `app/options.ts` file to include the providers you want to use:
+
+```ts
+import { HandshakeOptions, GitHub } from "handshake";
+
+const options: HandshakeOptions = {
+  // Register the providers you want to use, entering the
+  // required credentials for each of them.
+  handlers: [
+    GitHub({
+      clientId: process.env.GITHUB_CLIENT_ID!,
+      clientSecret: process.env.GITHUB_CLIENT_SECRET!,
+      scopes: ["repo"],
+    }),
+  ],
+  // Tell Handshake which hosts it can redirect users back to. This is a
+  // security measure to prevent malicious redirects.
+  allowedRedirectHosts: [process.env.ALLOWED_REDIRECT_HOST],
+  // Set a unique secret to sign session cookies.
+  secret: process.env.SESSION_SECRET!,
+};
+```
+
+Make sure to place sensitive information in your `.env` file.
+
+You can now run your app:
+
+```bash
+cd app
+pnpm dev
+```
+
+If you navigate to `localhost:3000`, you should see a list of all the configured
+providers:
+
+![](/images/readme-landing-2.png)
+
+# Deploy
+
+Deploy the app to Vercel by running, from the root folder:
+
+```bash
+vercel deploy
+```
+
+You must call `vercel deploy` **from the root folder**, even though the Next.js
+app folder lives within `app/`. The app code needs the `handshake/` folder,
+which otherwise won't be available.
+
+<img src="https://handshake.cool/images/vercel-deploy.gif" width="400" />
+
+The command may tell you "No framework detected" instead of detecting Next.js as
+your framework. Steps to fix this are outlined below.
+
+## Fix project root and framework preset in Vercel
+
+Once your project exists within Vercel, go to **Settings > General**.
+
+First, set "Framework Preset" setting to "Next.js".
+
+![](/images/readme-vercel-setings-next.png)
+
+Then, set the "Root Directory" to `app`. This will tell Vercel to look for the
+actual Next.js code in the right folder.
+
+![](/images/readme-vercel-setings-root.png)
+
+## Upload environment variables to Vercel
+
+Set `SESSION_SECRET`, `ALLOWED_REDIRECT_HOST` and any other secrets you're using by going
+to **Settings > Environment Variables**, or directly [via the Vercel
+CLI](https://vercel.com/env).
+
+# FAQ
+
+## Can you add support for X provider?
+
+Yes! Please open an issue or reach out to us at
+[team@fiber.dev](mailto:team@fiber.dev).
+
+## How is this different from next-auth or passport?
+
+Libraries like [next-auth](https://github.com/nextauthjs/next-auth) and
+[passport](https://github.com/jaredhanson/passport) help you sign users into
+your app using their third-party identities. You use them to implement the "Sign
+In With Google" or "Sign In With Github" buttons.
+
+In contrast, Handshake help you acquire access tokens to your users' accounts in
+other apps. It's authorization instead of authentication. Handshake actually
+uses `next-auth`'s large catalog of OAuth provider information under the hood.
+
+# Contributing
+
+Thank you for considering contributing to Handshake! If you believe you found a bug, [open an issue](https://github.com/fiberinc/handshake/issues). To add new features or make improvements to the code, create a [pull request](https://github.com/fiberinc/handshake/pulls).
+
+# License
+
+MIT
+
+[1]: https://handshake.cool/providers

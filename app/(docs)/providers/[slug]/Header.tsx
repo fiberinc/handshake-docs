@@ -18,7 +18,7 @@ export function Header({ provider }: Props) {
 					)
 				}
 				title={provider.title}
-				subtitle={`Obtain access tokens from ${provider.title} with Handshake`}
+				subtitle={`Obtain access tokens to ${provider.title} accounts with Handshake.`}
 			/>
 			<header className="hidden flex flex-col gap-6">
 				<Text variant="pretitle">OAuth Providers</Text>

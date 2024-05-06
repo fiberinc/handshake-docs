@@ -39,31 +39,24 @@ export default async function Page({ params }: Props) {
 	}
 
 	return (
-		<div className="relative flex flex-row gap-16">
-			<DocPageMain>
-				<Main provider={provider} />
-			</DocPageMain>
-			<nav className="hidden xl:block w-[200px]">
-				<div className="fixed">
-					<TableOfContents
-						links={
-							[
-								{ slug: 'configuration', title: 'Configuration' },
-								{ slug: 'usage', title: 'Usage' },
-								provider.setup && {
-									slug: 'setup',
-									title: 'Provider setup',
-								},
-								provider.troubleshoot && {
-									slug: 'troubleshoot',
-									title: 'Troubleshoot',
-								},
-							].filter(Boolean) as any[]
-						}
-					/>
-				</div>
-			</nav>
-		</div>
+		<DocPageMain
+			toc={
+				[
+					{ slug: 'configuration', title: 'Configuration' },
+					{ slug: 'usage', title: 'Usage' },
+					provider.setup && {
+						slug: 'setup',
+						title: 'Provider setup',
+					},
+					provider.troubleshoot && {
+						slug: 'troubleshoot',
+						title: 'Troubleshoot',
+					},
+				].filter(Boolean) as any[]
+			}
+		>
+			<Main provider={provider} />
+		</DocPageMain>
 	);
 }
 

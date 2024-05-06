@@ -1,8 +1,13 @@
 import Link from 'next/link';
 import { Text } from '~/ui/Text';
 
+export interface TocLink {
+	title: string;
+	slug: string;
+}
+
 interface Props {
-	links: { title: string; slug: string }[];
+	links: TocLink[];
 }
 
 export function TableOfContents({ links }: Props) {
