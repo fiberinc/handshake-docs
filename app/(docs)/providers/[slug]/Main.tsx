@@ -26,7 +26,7 @@ export async function Main({ provider }: Props) {
 							How it works
 						</Link>
 					</h1>
-					<p>With your instance deployed, simply redirect users to:</p>
+					<p>With your instance deployed, redirect users to:</p>
 					<pre>
 						<code>
 							https://YOUR_HANDSHAKE_INSTANCE_URL/auth/
@@ -40,23 +40,26 @@ export async function Main({ provider }: Props) {
 						<code>
 							{provider.objectName}({})
 						</code>{' '}
-						factory. (See <Link href="#usage">Usage</Link> below.)
+						factory. (See <Link href="#options">Options</Link> below.)
 					</p>
 					<p>
-						Handshake will take the user through the {provider.title} OAuth flow
-						and redirect them back to the URL specified by the{' '}
-						<code>callback_uri</code> query parameter.
+						Handshake will take each user through the {provider.title} OAuth
+						flow and before sending them back to you, at the URL specified by
+						the <code>callback_uri</code> query parameter.
 					</p>
 					<MdxRenderInline
-						{...await serialize(provider.usage || '', makeSerializeOptions())}
+						{...await serialize(
+							provider.docs.redirect || '',
+							makeSerializeOptions()
+						)}
 					/>
 				</section>
 
 				<Divider />
 				<section className="prose block markdown dark:prose-invert">
-					<h1 id="usage">
-						<Link href="#Usage" className="text-inherit">
-							Usage
+					<h1 id="options">
+						<Link href="#options" className="text-inherit">
+							Options
 						</Link>
 					</h1>
 
@@ -66,7 +69,7 @@ export async function Main({ provider }: Props) {
 					</p>
 					<MdxRenderInline
 						{...await serialize(
-							provider.configuration || '',
+							provider.docs.options || '',
 							makeSerializeOptions()
 						)}
 					/>
@@ -76,7 +79,7 @@ export async function Main({ provider }: Props) {
 					</p>
 				</section>
 
-				{provider.setup && (
+				{provider.docs.provider && (
 					<>
 						<Divider />
 						<section className="prose block markdown dark:prose-invert">
@@ -88,7 +91,7 @@ export async function Main({ provider }: Props) {
 
 							<MdxRenderInline
 								{...await serialize(
-									provider.setup || '',
+									provider.docs.provider || '',
 									makeSerializeOptions()
 								)}
 							/>
@@ -105,28 +108,28 @@ export async function Main({ provider }: Props) {
 							</Link>
 						</h1>
 
-						{provider.troubleshoot && (
+						{provider.docs.troubleshoot && (
 							<>
 								<MdxRenderInline
 									{...await serialize(
-										provider.troubleshoot || '',
+										provider.docs.troubleshoot || '',
 										makeSerializeOptions()
 									)}
 								/>
-								<p>–</p>
+								<Divider />
 							</>
 						)}
 
 						<p>
-							Having an issue{' '}
-							{provider.troubleshoot
+							Facing an issue{' '}
+							{provider.docs.troubleshoot
 								? 'not included here'
 								: `making ${provider.title} work`}
-							? Open{' '}
+							?{' '}
 							<a href={REPO_URL + '/issues'} target="_blank">
-								an issue in our Github repo
+								Open an issue on Github
 							</a>{' '}
-							to get help from our team.
+							to get help.
 						</p>
 					</section>
 				</>

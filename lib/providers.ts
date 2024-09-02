@@ -8,15 +8,16 @@ export interface Provider {
 	objectName: string;
 	title: string;
 	website: string | null;
-	summary: string | any;
 	docsUrl: string;
-	setup: string | null;
-	troubleshoot: string | null;
-	configuration: string;
-	usage: string;
+	docs: {
+		redirect: string | null;
+		options: string | null;
+		troubleshoot: string | null;
+		provider: string | null;
+	};
 }
 
-function makeProviderUsage(provider: ProviderInput): string {
+function makeFallbackOptions(provider: ProviderInput): string {
 	return `
 \`\`\`ts title="app/options.ts"
 import { ${provider.objectName}, HandshakeOptions } from "handshake";
@@ -44,18 +45,26 @@ export async function getProvider(
 	if (!base) {
 		return null;
 	}
+	return baseToProvider(base);
+}
+
+function baseToProvider(base: (typeof providers)[number]): Provider {
 	return {
+		...base,
 		id: base.id,
 		objectName: base.objectName,
 		title: base.title,
-		docsUrl: base.docsUrl,
 		website: base.website,
-		configuration: base.configuration || makeProviderUsage(base),
-		troubleshoot: base.troubleshoot,
-		setup: base.setup,
-		usage: base.usage,
-		summary: base.summary,
-		// serialized: await getProviderDocs(base, options),
+		docsUrl: base.docsUrl,
+		// troubleshoot: base.troubleshoot,
+		// setup: base.setup,
+		// usage: base.usage,
+		docs: {
+			redirect: base.blockTagsByName.redirect || null,
+			options: base.blockTagsByName.options || makeFallbackOptions(base),
+			troubleshoot: base.blockTagsByName.troubleshoot || null,
+			provider: base.blockTagsByName.providersetup || null,
+		},
 	};
 }
 
@@ -65,19 +74,5 @@ export async function getProviders(): Promise<Provider[]> {
 			? providers.slice(0, 400)
 			: providers;
 
-	return filteredProviders.map((base): Provider => {
-		return {
-			...base,
-			id: base.id,
-			objectName: base.objectName,
-			title: base.title,
-			website: base.website,
-			docsUrl: base.docsUrl,
-			configuration: base.configuration || makeProviderUsage(base),
-			troubleshoot: base.troubleshoot,
-			setup: base.setup,
-			usage: base.usage,
-			summary: base.summary,
-		};
-	});
+	return filteredProviders.map(baseToProvider);
 }

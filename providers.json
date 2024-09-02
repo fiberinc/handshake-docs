@@ -6,12 +6,8 @@
     "website": "https://www.aweber.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "acton",
@@ -20,12 +16,8 @@
     "website": "https://www.act-on.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "acuityscheduling",
@@ -34,12 +26,8 @@
     "website": "https://acuityscheduling.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "adobe",
@@ -48,12 +36,8 @@
     "website": "https://www.adobe.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "aha",
@@ -62,12 +46,8 @@
     "website": "https://www.aha.io",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "alchemer",
@@ -76,12 +56,8 @@
     "website": "https://www.alchemer.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "amazon-seller",
@@ -90,12 +66,13 @@
     "website": "https://sellercentral.amazon.com/",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "https://developer-docs.amazon.com/sp-api/docs/website-authorization-workflow",
-    "configuration": "```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Amazon } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Amazon({\n      appId: string,\n      clientId: string,\n      clientSecret: string,\n      isDraftApp: true | false,\n    });\n  ],\n  // ...\n};\n```",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "Need to \"set up your “Authorize” buttons so that selling partners are\nredirected to the Seller Central (for sellers) or Vendor Central (for\nvendors) sign-in page for their own region.\"\n\n### No localhost redirect\n\nAmazon does not allow setting localhost as a \n`redirect_uri`\n. You may want to\nuse Ngrok or another service to provide a publicly addressable URL.\n\n[https://github.com/amzn/selling-partner-api-docs/issues/26](https://github.com/amzn/selling-partner-api-docs/issues/26)\n\n### Error Code: MD5101\n\nThis means unauthorized redirect URI. localhost URIs are allowed.\n\n### Developer Central – \"You do not have permissions to view this page\"\n\nFYI. Only the primary user of the Seller Central account is able to create\nand modify apps via the \"Developer Central\" page.\n\n[https://github.com/amzn/selling-partner-api-docs/issues/2191](https://github.com/amzn/selling-partner-api-docs/issues/2191)\n\n### Not setup for OAuth\n\n![Error shows up when OAuth hasn't been enabled for application](/images/docs/amazon/not-setup-oauth.png)",
-    "summary": ""
+    "blockTagsByName": {
+      "title": "Amazon Seller Central",
+      "reference": "https://developer-docs.amazon.com/sp-api/docs/website-authorization-workflow",
+      "options": "```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Amazon } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Amazon({\n      appId: string,\n      clientId: string,\n      clientSecret: string,\n      isDraftApp: true | false,\n    });\n  ],\n  // ...\n};\n```",
+      "troubleshoot": "Need to \"set up your “Authorize” buttons so that selling partners are\nredirected to the Seller Central (for sellers) or Vendor Central (for\nvendors) sign-in page for their own region.\"\n\n### No localhost redirect\n\nAmazon does not allow setting localhost as a \n`redirect_uri`\n. You may want to\nuse Ngrok or another service to provide a publicly addressable URL.\n\n[https://github.com/amzn/selling-partner-api-docs/issues/26](https://github.com/amzn/selling-partner-api-docs/issues/26)\n\n### Error Code: MD5101\n\nThis means unauthorized redirect URI. localhost URIs are allowed.\n\n### Developer Central – \"You do not have permissions to view this page\"\n\nFYI. Only the primary user of the Seller Central account is able to create\nand modify apps via the \"Developer Central\" page.\n\n[https://github.com/amzn/selling-partner-api-docs/issues/2191](https://github.com/amzn/selling-partner-api-docs/issues/2191)\n\n### Not setup for OAuth\n\n![Error shows up when OAuth hasn't been enabled for application](/images/docs/amazon/not-setup-oauth.png)"
+    },
+    "docsUrl": "https://developer-docs.amazon.com/sp-api/docs/website-authorization-workflow"
   },
   {
     "id": "angellist",
@@ -104,12 +81,8 @@
     "website": "https://angel.co",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "apple",
@@ -118,12 +91,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "arcgis",
@@ -132,12 +101,8 @@
     "website": "https://www.arcgis.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "asana",
@@ -146,12 +111,8 @@
     "website": "https://asana.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "assembla",
@@ -160,12 +121,8 @@
     "website": "https://www.assembla.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "atlassian",
@@ -174,12 +131,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "auth0",
@@ -188,12 +141,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "authing",
@@ -202,12 +151,8 @@
     "website": "https://www.authing.cn",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "autodesk",
@@ -216,12 +161,8 @@
     "website": "https://www.autodesk.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "axosoft",
@@ -230,12 +171,8 @@
     "website": "https://www.axosoft.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "azure-ad",
@@ -244,12 +181,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "azure-ad-b2c",
@@ -258,12 +191,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "baidu",
@@ -272,12 +201,8 @@
     "website": "https://www.baidu.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "basecamp",
@@ -286,12 +211,8 @@
     "website": "https://basecamp.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "battlenet",
@@ -300,12 +221,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "beatport",
@@ -314,12 +231,18 @@
     "website": "https://www.beatport.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
+  },
+  {
+    "id": "bigcommerce",
+    "objectName": "BigCommerce",
+    "title": "BigCommerce",
+    "website": "https://bigcommerce.com",
+    "isFromNextAuth": false,
+    "takesSubdomainArg": false,
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "bitbucket",
@@ -328,12 +251,8 @@
     "website": "https://bitbucket.org",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "bitly",
@@ -342,12 +261,8 @@
     "website": "https://bitly.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "box",
@@ -356,12 +271,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "buffer",
@@ -370,12 +281,8 @@
     "website": "https://bufferapp.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "bungie",
@@ -384,12 +291,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "cas",
@@ -398,12 +301,8 @@
     "website": "https://www.apereo.org/projects/cas",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "campaignmonitor",
@@ -412,12 +311,8 @@
     "website": "https://www.campaignmonitor.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "clio",
@@ -426,12 +321,8 @@
     "website": "https://www.clio.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "cognito",
@@ -440,12 +331,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "coinbase",
@@ -454,12 +341,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "concur",
@@ -468,12 +351,8 @@
     "website": "https://www.concur.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "constantcontact",
@@ -482,12 +361,8 @@
     "website": "https://www.constantcontact.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "coursera",
@@ -496,12 +371,8 @@
     "website": "https://www.coursera.org",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "crossid",
@@ -510,12 +381,8 @@
     "website": "https://www.crossid.io",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "dailymotion",
@@ -524,12 +391,8 @@
     "website": "https://www.dailymotion.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "deezer",
@@ -538,12 +401,8 @@
     "website": "https://www.deezer.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "delivery",
@@ -552,12 +411,8 @@
     "website": "https://www.delivery.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "deputy",
@@ -566,12 +421,8 @@
     "website": "https://www.deputy.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "deviantart",
@@ -580,12 +431,8 @@
     "website": "https://www.deviantart.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "digitalocean",
@@ -594,12 +441,8 @@
     "website": "https://www.digitalocean.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "discogs",
@@ -608,12 +451,8 @@
     "website": "https://www.discogs.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "discord",
@@ -622,12 +461,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "disqus",
@@ -636,12 +471,8 @@
     "website": "https://www.disqus.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "docusign",
@@ -650,12 +481,8 @@
     "website": "https://www.docusign.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "dribbble",
@@ -664,12 +491,8 @@
     "website": "https://www.dribbble.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "dropbox",
@@ -678,12 +501,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "ebay",
@@ -692,12 +511,8 @@
     "website": "https://www.ebay.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "echosign",
@@ -706,12 +521,8 @@
     "website": "https://acrobat.adobe.com/us/en/sign.html",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "ecwid",
@@ -720,12 +531,8 @@
     "website": "https://www.ecwid.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "egnyte",
@@ -734,12 +541,8 @@
     "website": "https://www.egnyte.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "etsy",
@@ -748,12 +551,8 @@
     "website": "https://www.etsy.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "eventbrite",
@@ -762,12 +561,8 @@
     "website": "https://www.eventbrite.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "eveonline",
@@ -776,12 +571,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "evernote",
@@ -790,12 +581,8 @@
     "website": "https://www.evernote.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "eyeem",
@@ -804,12 +591,8 @@
     "website": "https://www.eyeem.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "facebook",
@@ -818,12 +601,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "faceit",
@@ -832,12 +611,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "faire",
@@ -846,12 +621,8 @@
     "website": "https://faire.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": "Connect to your customers' [Faire](https://faire.com) accounts.\n\n## Usage\n\nProvide the following arguments:\n\n\n```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Faire } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Faire({\n      clientId: process.env.FAIRE_CLIENT_ID!, // string\n      clientSecret: process.env.FAIRE_CLIENT_SECRET!, // string\n      scopes: [\"READ_BRAND\"], // FaireScope[]\n    }),\n  ],\n  // ...\n};\n```\n\n\nNote that Faire uses the \"Application ID\" and \"Secret ID\" as the client ID\nand client secret in the OAuth flow.\n\n## Setup\n\n[Documentation](https://faire.github.io/external-api-v2-docs/#using-oauth)\n\n[Support article](https://www.faire.com/support/articles/4409994540571)\n\n![faire-credentials](/images/docs/faire-creds.png)"
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "familysearch",
@@ -860,12 +631,8 @@
     "website": "https://www.familysearch.org",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "feedly",
@@ -874,12 +641,8 @@
     "website": "https://www.feedly.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "figma",
@@ -888,12 +651,8 @@
     "website": "https://www.figma.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "fitbit",
@@ -902,12 +661,8 @@
     "website": "https://www.fitbit.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "flickr",
@@ -916,12 +671,8 @@
     "website": "https://www.flickr.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "formstack",
@@ -930,12 +681,8 @@
     "website": "https://www.formstack.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "42-school",
@@ -944,12 +691,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "foursquare",
@@ -958,12 +701,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "freeagent",
@@ -972,12 +711,8 @@
     "website": "https://www.freeagent.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "freelancer",
@@ -986,12 +721,8 @@
     "website": "https://www.freelancer.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "freshbooks",
@@ -1000,12 +731,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "fusionauth",
@@ -1014,12 +741,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "garmin",
@@ -1028,12 +751,8 @@
     "website": "https://connect.garmin.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "geeklist",
@@ -1042,12 +761,8 @@
     "website": "https://geekli.st",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "genius",
@@ -1056,12 +771,8 @@
     "website": "https://genius.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "getbase",
@@ -1070,12 +781,8 @@
     "website": "https://www.getbase.com/sell/",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "github",
@@ -1084,12 +791,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "gitbook",
@@ -1098,12 +801,8 @@
     "website": "https://www.gitbook.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "gitlab",
@@ -1112,12 +811,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "goodreads",
@@ -1126,26 +821,21 @@
     "website": "https://www.goodreads.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "google",
     "objectName": "Google",
     "title": "Google",
-    "website": null,
-    "isFromNextAuth": true,
+    "website": "https://google.com",
+    "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {
+      "reference": "https://developer.monday.com/apps/docs/oauth",
+      "options": "```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Google } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Google({\n      clientId: process.env.GOOGLE_CLIENT_ID!, // string\n      clientSecret: process.env.GOOGLE_CLIENT_SECRET!, // string\n      scopes: [\"account:read\"], // GoogleScope[]\n    }),\n  ],\n  // ...\n};\n```"
+    },
+    "docsUrl": "https://developer.monday.com/apps/docs/oauth"
   },
   {
     "id": "groove",
@@ -1154,12 +844,8 @@
     "website": "https://www.groovehq.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "gumroad",
@@ -1168,12 +854,8 @@
     "website": "https://gumroad.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "harvest",
@@ -1182,12 +864,8 @@
     "website": "https://www.getharvest.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "hellosign",
@@ -1196,12 +874,8 @@
     "website": "https://www.hellosign.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "heroku",
@@ -1210,12 +884,8 @@
     "website": "https://www.heroku.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "homeaway",
@@ -1224,12 +894,8 @@
     "website": "https://www.homeaway.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "hootsuite",
@@ -1238,26 +904,22 @@
     "website": "https://hootsuite.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "hubspot",
-    "objectName": "Hubspot",
+    "objectName": "HubSpot",
     "title": "HubSpot",
-    "website": null,
-    "isFromNextAuth": true,
+    "website": "https://hubspot.com",
+    "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": "## Usage\n\nProvide the following arguments:\n\n\n```ts\n// Inside app/options.ts\n\nimport { Hubspot } from \"handshake\";\n\nHubspot({\n  clientId: string,\n  clientSecret: string,\n  scopes: [\n    \"e-commerce\",\n    \"crm.schemas.contacts.read\",\n    \"crm.objects.contacts.read\",\n  ],\n});\n```\n\n\n### Configure the Callback URL\n\nMake sure your Handshake URL is allowed within your Hubspot app's Auth tab:\n\n![hubspot-redirect-settings](/images/docs/hubspot-redirect.png)\n\nFollow the format: \n`https://HANDSHAKE_URL/auth/hubspot/callback`"
+    "blockTagsByName": {
+      "options": "```ts title=\"app/options.ts\"\nimport { HubSpot } from \"handshake\";\n\nHubSpot({\n  clientId: string,\n  clientSecret: string,\n  scopes: [\n    \"e-commerce\",\n    \"crm.schemas.contacts.read\" |\n    \"crm.objects.contacts.read\" |\n  ],\n});\n```",
+      "providersetup": "## Configure the Callback URL\n\nMake sure your Handshake URL is allowed within your HubSpot app's Auth tab:\n\n![hubspot-redirect-settings](/images/docs/hubspot-redirect.png)\n\nFollow the format: \n`https://HANDSHAKE_URL/auth/hubspot/callback`",
+      "troubleshoot": "### \"provided scopes are insufficient\"\n\nYou MUST pass ALL the scopes you configured for your to the \n`scopes`\n array.\nPassing even a subset of the scopes will fail."
+    },
+    "docsUrl": ""
   },
   {
     "id": "huddle",
@@ -1266,12 +928,8 @@
     "website": "https://www.huddle.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "ibm",
@@ -1280,12 +938,8 @@
     "website": "https://www.ibm.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "idme",
@@ -1294,12 +948,8 @@
     "website": "https://www.id.me",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "idonethis",
@@ -1308,12 +958,8 @@
     "website": "https://home.idonethis.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "iconfinder",
@@ -1322,12 +968,8 @@
     "website": null,
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "imgur",
@@ -1336,12 +978,8 @@
     "website": "https://imgur.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "infusionsoft",
@@ -1350,12 +988,8 @@
     "website": "https://www.infusionsoft.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "instagram",
@@ -1364,12 +998,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "intuit",
@@ -1378,12 +1008,8 @@
     "website": "https://www.intuit.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "jamendo",
@@ -1392,12 +1018,8 @@
     "website": "https://www.jamendo.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "kakao",
@@ -1406,12 +1028,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "keycloak",
@@ -1420,12 +1038,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "line",
@@ -1434,12 +1048,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "linkedin",
@@ -1448,12 +1058,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "livechat",
@@ -1462,12 +1068,8 @@
     "website": "https://www.livechat.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "logingov",
@@ -1476,12 +1078,8 @@
     "website": "https://login.gov",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "lyft",
@@ -1490,12 +1088,8 @@
     "website": "https://www.lyft.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "myob",
@@ -1504,12 +1098,8 @@
     "website": "https://www.myob.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "mailup",
@@ -1518,12 +1108,8 @@
     "website": "https://www.mailup.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "mailchimp",
@@ -1532,12 +1118,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "mailru",
@@ -1546,12 +1128,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "mailxpert",
@@ -1560,12 +1138,8 @@
     "website": "https://www.mailxpert.ch",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "mapmyfitness",
@@ -1574,12 +1148,8 @@
     "website": "https://www.mapmyfitness.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "mastodon",
@@ -1588,12 +1158,8 @@
     "website": "https://joinmastodon.org",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "medium",
@@ -1602,12 +1168,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "meetup",
@@ -1616,12 +1178,8 @@
     "website": "https://www.meetup.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "mendeley",
@@ -1630,12 +1188,8 @@
     "website": "https://www.mendeley.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "mention",
@@ -1644,12 +1198,8 @@
     "website": "https://mention.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "microsoft",
@@ -1658,12 +1208,8 @@
     "website": "https://www.microsoft.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "live",
@@ -1672,12 +1218,8 @@
     "website": "https://live.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "mixcloud",
@@ -1686,12 +1228,8 @@
     "website": "https://www.mixcloud.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "monday",
@@ -1700,12 +1238,13 @@
     "website": "https://monday.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": "Connect to your customers' [Monday](https://monday.com) accounts.\n\n## Usage\n\nProvide the following arguments:\n\n\n```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Monday } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Monday({\n      clientId: process.env.MONDAY_CLIENT_ID!, // string\n      clientSecret: process.env.MONDAY_CLIENT_SECRET!, // string\n      scopes: [\"account:read\"], // MondayScope[]\n    }),\n  ],\n  // ...\n};\n```\n\n\n## Setup\n\n[Documentation](https://developer.monday.com/apps/docs/oauth)\n\n![monday-credentials](/images/docs/monday-creds.png)\n![monday-credentials](/images/docs/monday-allow-redirect.png)\n\n## Troubleshooting\n\n### \"invalid_scope: Invalid scope param\"\n\nYou configured Handshake to request a scope that you didn't enable in your\napp's settings."
+    "blockTagsByName": {
+      "reference": "https://developer.monday.com/apps/docs/oauth",
+      "options": "```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Monday } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Monday({\n      clientId: process.env.MONDAY_CLIENT_ID!, // string\n      clientSecret: process.env.MONDAY_CLIENT_SECRET!, // string\n      scopes: [\"account:read\"], // MondayScope[]\n    }),\n  ],\n  // ...\n};\n```",
+      "providersetup": "![monday-credentials](/images/docs/monday-creds.png)\n![monday-credentials](/images/docs/monday-allow-redirect.png)",
+      "troubleshoot": "### \"invalid_scope: Invalid scope param\"\n\nYou configured Handshake to request a scope that you didn't enable in your\napp's settings."
+    },
+    "docsUrl": "https://developer.monday.com/apps/docs/oauth"
   },
   {
     "id": "moxtra",
@@ -1714,12 +1253,8 @@
     "website": "https://www.moxtra.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "naver",
@@ -1728,12 +1263,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "nest",
@@ -1742,12 +1273,8 @@
     "website": "https://www.nest.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "netlify",
@@ -1756,12 +1283,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "nokotime",
@@ -1770,12 +1293,8 @@
     "website": "https://www.nokotime.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "notion",
@@ -1784,12 +1303,8 @@
     "website": "https://www.notion.so",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "nylas",
@@ -1798,12 +1313,8 @@
     "website": "https://www.nylas.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "okta",
@@ -1812,12 +1323,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "onelogin",
@@ -1826,12 +1333,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "openstreetmap2",
@@ -1840,12 +1343,8 @@
     "website": "https://www.openstreetmap.org",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "optimizely",
@@ -1854,12 +1353,8 @@
     "website": "https://www.optimizely.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "osso",
@@ -1868,12 +1363,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "osu",
@@ -1882,12 +1373,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "passage",
@@ -1896,12 +1383,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "patreon",
@@ -1910,12 +1393,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "paypal",
@@ -1924,12 +1403,8 @@
     "website": "https://www.paypal.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "pinterest",
@@ -1938,12 +1413,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "pipedrive",
@@ -1952,12 +1423,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "plurk",
@@ -1966,12 +1433,8 @@
     "website": "https://www.plurk.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "pocket",
@@ -1980,12 +1443,8 @@
     "website": "https://getpocket.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "podio",
@@ -1994,12 +1453,8 @@
     "website": "https://www.podio.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "procore",
@@ -2008,12 +1463,8 @@
     "website": "https://www.procore.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "producthunt",
@@ -2022,12 +1473,8 @@
     "website": "https://www.producthunt.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "projectplace",
@@ -2036,12 +1483,8 @@
     "website": "https://www.projectplace.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "pushbullet",
@@ -2050,12 +1493,8 @@
     "website": "https://pushbullet.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "qq",
@@ -2064,12 +1503,8 @@
     "website": "https://qq.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "ravelry",
@@ -2078,12 +1513,8 @@
     "website": "https://ravelry.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "redbooth",
@@ -2092,12 +1523,8 @@
     "website": "https://redbooth.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "reddit",
@@ -2106,12 +1533,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "runkeeper",
@@ -2120,12 +1543,8 @@
     "website": "https://runkeeper.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "salesforce",
@@ -2134,12 +1553,11 @@
     "website": "https://salesforce.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": "## Usage\n\nProvide the following arguments:\n\n\n```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Salesforce } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Salesforce({\n      clientId: string,\n      clientSecret: string,\n      scopes: string[],\n      issuer?: string,\n    }),\n  ],\n  // ...\n};\n```\n\n\n[Scope documentation](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_tokens_scopes.htm&type=5)"
+    "blockTagsByName": {
+      "options": "```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Salesforce } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Salesforce({\n      clientId: string,\n      clientSecret: string,\n      scopes: string[],\n      issuer?: string,\n    }),\n  ],\n  // ...\n};\n```\n\n\n[Read about valid scopes.](https://help.salesforce.com/s/articleView?id=sf.remoteaccess_oauth_tokens_scopes.htm&type=5)",
+      "troubleshoot": "### Not getting refresh token\n\nMake sure you have the \n`refresh_token`\n scope in the \n`scopes`\n array. Make sure\nit's also in the \n`Connected App`\n settings in Salesforce."
+    },
+    "docsUrl": ""
   },
   {
     "id": "sellsy",
@@ -2148,12 +1566,8 @@
     "website": "https://sellsy.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "shoeboxed",
@@ -2162,12 +1576,8 @@
     "website": "https://shoeboxed.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "shopify",
@@ -2176,12 +1586,13 @@
     "website": "https://shopify.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Shopify } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Shopify({\n      clientId: process.env.SHOPIFY_CLIENT_ID!,\n      clientSecret: process.env.SHOPIFY_CLIENT_SECRET!,\n      scopes: [\"read_orders\", \"read_products\"],\n    }),\n  ],\n};\n\n// ...\n```",
-    "usage": "You must include an \n`extras.shop`\n parameter to identify the shop that you're\ntrying to take through the OAuth flow.\n\nThe final URL might look something like this:\n\n\n```bash\nhttps://YOUR_HANDSHAKE_INSTANCE_URL/auth/shopify/redirect?\n  state=12345\n  &extras.shop=example.myshopify.com\n  &callback_uri=http://YOUR_APP_URL/shopify-integration/done\n```",
-    "setup": "The \n`clientId`\n and \n`clientSecret`\n arguments to the \n`Shopify()`\n handler come\nfrom your Shopify app.\n\n## 1. Create a Shopify app\n\nYou must have a Shopify app to take users through the OAuth flow. Check out this [in-depth tutorial on how authentication works in the\nShopify ecosystem](https://fiber.dev/blog/shopify-oauth-guide).\n\nWithin your app, you'll find the client ID and secret:\n\n![Find client ID and secret in the admin of your Shopify\napp.](/images/docs/shopify/app-keys.png)\n\n## 2. Configure the Callback URL\n\nMake sure your Handshake URL is allowed within your Shopify app's\nConfiguration tab:\n\n![](/images/docs/shopify/app-redirect.png)\n\nFollow the format: \n`https://HANDSHAKE_URL/auth/shopify/callback`",
-    "troubleshoot": "### \"The redirect_uri is not whitelisted\"\n\nIf you see this, the Handshake callback URL you asked Shopify to send users\nback to wasn't added to the list of allowed URLs in your Shopify app\nsettings.\n\n![Shopify error page saying \"The redirect_uri is not\nwhitelisted\"](/images/docs/shopify/trouble-unauthorized-redirect.png)",
-    "summary": ""
+    "blockTagsByName": {
+      "redirect": "For Shopify, you must include an \n`extras.shop`\n parameter to identify the shop\nthat you're trying to take through the OAuth flow. The final URL might look\nsomething like this:\n\n\n```bash\nhttps://YOUR_HANDSHAKE_INSTANCE_URL/auth/shopify/redirect?\n  state=12345\n  &extras.shop=example.myshopify.com\n  &callback_uri=http://YOUR_APP_URL/shopify-integration/done # example\n```",
+      "options": "```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Shopify } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Shopify({\n      clientId: process.env.SHOPIFY_CLIENT_ID!,\n      clientSecret: process.env.SHOPIFY_CLIENT_SECRET!,\n      scopes: [\"read_orders\", \"read_products\"],\n    }),\n  ],\n};\n\n// ...\n```",
+      "providersetup": "The \n`clientId`\n and \n`clientSecret`\n arguments to the \n`Shopify()`\n handler come\nfrom your Shopify app.\n\n## 1. Create a Shopify app\n\nYou must have a Shopify app to take users through the OAuth flow. Check out\nthis [in-depth tutorial on how authentication works in the Shopify\necosystem](https://fiber.dev/blog/shopify-oauth-guide).\n\nWithin your app, you'll find the client ID and secret:\n\n![Find client ID and secret in the admin of your Shopify\napp.](/images/docs/shopify/app-keys.png)\n\n## 2. Configure the Callback URL\n\nMake sure your Handshake URL is allowed within your Shopify app's\nConfiguration tab:\n\n![](/images/docs/shopify/app-redirect.png)\n\nFollow the format: \n`https://HANDSHAKE_URL/auth/shopify/callback`",
+      "troubleshoot": "### \"The redirect_uri is not whitelisted\"\n\nIf you see this, the Handshake callback URL you asked Shopify to send users\nback to wasn't added to the list of allowed URLs in your Shopify app\nsettings.\n\n![Shopify error page saying \"The redirect_uri is not\nwhitelisted\"](/images/docs/shopify/trouble-unauthorized-redirect.png)"
+    },
+    "docsUrl": ""
   },
   {
     "id": "slack",
@@ -2190,12 +1601,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "smartsheet",
@@ -2204,12 +1611,8 @@
     "website": "https://smartsheet.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "smugmug",
@@ -2218,12 +1621,8 @@
     "website": "https://smugmug.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "snapchat",
@@ -2232,12 +1631,8 @@
     "website": "https://snapchat.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "snowflake",
@@ -2246,12 +1641,8 @@
     "website": "https://www.snowflake.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "socialpilot",
@@ -2260,12 +1651,8 @@
     "website": "https://www.socialpilot.co",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "socrata",
@@ -2274,12 +1661,8 @@
     "website": "https://www.socrata.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "soundcloud",
@@ -2288,12 +1671,8 @@
     "website": "https://soundcloud.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "spotify",
@@ -2302,12 +1681,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "square",
@@ -2316,12 +1691,8 @@
     "website": "https://squareup.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "stackexchange",
@@ -2330,12 +1701,8 @@
     "website": "https://stackexchange.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "stocktwits",
@@ -2344,12 +1711,8 @@
     "website": "https://stocktwits.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "stormz",
@@ -2358,12 +1721,8 @@
     "website": "https://stormz.me",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "storyblok",
@@ -2372,12 +1731,8 @@
     "website": "https://www.storyblok.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "strava",
@@ -2386,12 +1741,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "stripe",
@@ -2400,12 +1751,8 @@
     "website": "https://stripe.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": "## Usage\n\nProvide the following arguments:\n\n\n```ts title=\"app/options.ts\"\n\nimport { Stripe } from \"handshake\";\n\nStripe({\n  clientId: \"ca_\",\n  clientSecret: \"sk_\",\n  scopes: [],\n});\n```\n\n\n### Allow your Handshake callback URL\n\nIn your Stripe app settings.\n\nYou can set up a localhost callback by toggling the \"View test data\" switch.\n\n![stripe-callback-settings](/images/docs/stripe-redirect.png)"
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "surveymonkey",
@@ -2414,12 +1761,8 @@
     "website": "https://www.surveymonkey.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "surveysparrow",
@@ -2428,12 +1771,8 @@
     "website": "https://surveysparrow.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "thingiverse",
@@ -2442,12 +1781,8 @@
     "website": "https://www.thingiverse.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "ticketbud",
@@ -2456,12 +1791,8 @@
     "website": "https://www.ticketbud.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "tiktok",
@@ -2470,12 +1801,8 @@
     "website": "https://www.tiktok.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "timely",
@@ -2484,12 +1811,8 @@
     "website": "https://www.timelyapp.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "todoist",
@@ -2498,12 +1821,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "trakt",
@@ -2512,12 +1831,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "traxo",
@@ -2526,12 +1841,8 @@
     "website": "https://www.traxo.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "trello",
@@ -2540,12 +1851,8 @@
     "website": "https://trello.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "tripit",
@@ -2554,12 +1861,8 @@
     "website": "https://www.tripit.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "trustpilot",
@@ -2568,12 +1871,8 @@
     "website": "https://www.trustpilot.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "tumblr",
@@ -2582,12 +1881,8 @@
     "website": "https://tumblr.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "twitch",
@@ -2596,12 +1891,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "twitter",
@@ -2610,12 +1901,8 @@
     "website": "https://twitter.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "typeform",
@@ -2624,12 +1911,8 @@
     "website": "https://www.typeform.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "uber",
@@ -2638,12 +1921,8 @@
     "website": "https://www.uber.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "unbounce",
@@ -2652,12 +1931,8 @@
     "website": "https://www.unbounce.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "underarmour",
@@ -2666,12 +1941,8 @@
     "website": "https://www.underarmour.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "united-effects",
@@ -2680,12 +1951,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "unsplash",
@@ -2694,12 +1961,8 @@
     "website": "https://unsplash.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "untappd",
@@ -2708,12 +1971,8 @@
     "website": "https://untappd.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "upwork",
@@ -2722,12 +1981,8 @@
     "website": "https://www.upwork.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "uservoice",
@@ -2736,12 +1991,8 @@
     "website": "https://www.uservoice.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "vend",
@@ -2750,12 +2001,8 @@
     "website": "https://www.vendhq.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "venmo",
@@ -2764,12 +2011,8 @@
     "website": "https://venmo.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "vercel",
@@ -2778,12 +2021,8 @@
     "website": "https://vercel.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "verticalresponse",
@@ -2792,12 +2031,8 @@
     "website": "https://www.verticalresponse.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "viadeo",
@@ -2806,12 +2041,8 @@
     "website": "https://www.viadeo.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "vimeo",
@@ -2820,12 +2051,8 @@
     "website": "https://vimeo.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "visualstudio",
@@ -2834,12 +2061,8 @@
     "website": "https://visualstudio.microsoft.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "vk",
@@ -2848,12 +2071,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "wechat",
@@ -2862,12 +2081,8 @@
     "website": "https://wechat.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "weekdone",
@@ -2876,12 +2091,8 @@
     "website": "https://weekdone.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "weibo",
@@ -2890,12 +2101,8 @@
     "website": "https://weibo.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "wikimedia",
@@ -2904,12 +2111,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "withings",
@@ -2918,12 +2121,8 @@
     "website": "https://www.withings.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "wordpress",
@@ -2932,12 +2131,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "workos",
@@ -2946,12 +2141,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "wrike",
@@ -2960,26 +2151,21 @@
     "website": "https://www.wrike.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "xero",
     "objectName": "Xero",
     "title": "Xero",
-    "website": "https://www.xero.com",
+    "website": "https://xero.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {
+      "options": "```ts title=\"app/options.ts\"\n\nimport { Xero } from \"handshake\";\n\nXero({\n clientId: process.env.XERO_CLIENT_ID,\n clientSecret: process.env.XERO_CLIENT_SECRET,\n scopes: [\"offline_access\", \"accounting.transactions\"],\n});\n```\n\n\nThe \n`offline_access`\n scope is required to get a \n`refresh_token`\n in your\nresponse.",
+      "troubleshoot": "You may see an \"Error: invalid_scope : Invalid scope\" error if the only scope\nyou provide is \n`offline_access`\n.\n\n![\"Invalid scope\" error](/images/docs/xero/invalid-scopes.png)"
+    },
+    "docsUrl": ""
   },
   {
     "id": "xing",
@@ -2988,12 +2174,8 @@
     "website": "https://www.xing.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "yahoo",
@@ -3002,12 +2184,8 @@
     "website": "https://www.yahoo.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "yammer",
@@ -3016,12 +2194,8 @@
     "website": "https://www.yammer.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "yandex",
@@ -3030,12 +2204,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "zendesk",
@@ -3044,12 +2214,8 @@
     "website": "https://www.zendesk.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": true,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "zitadel",
@@ -3058,12 +2224,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "zoho",
@@ -3072,12 +2234,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "zoom",
@@ -3086,12 +2244,8 @@
     "website": null,
     "isFromNextAuth": true,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "23andme",
@@ -3100,12 +2254,8 @@
     "website": "https://www.23andme.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   },
   {
     "id": "500px",
@@ -3114,11 +2264,7 @@
     "website": "https://500px.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "docsUrl": "",
-    "configuration": "",
-    "usage": "",
-    "setup": "",
-    "troubleshoot": "",
-    "summary": ""
+    "blockTagsByName": {},
+    "docsUrl": ""
   }
 ]

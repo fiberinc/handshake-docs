@@ -39,8 +39,8 @@ export default async function Page({ params }: Props) {
 			toc={
 				[
 					{ slug: 'how-it-works', title: 'How it works' },
-					{ slug: 'usage', title: 'Usage' },
-					provider.setup && {
+					{ slug: 'options', title: 'Options' },
+					provider.docs.provider && {
 						slug: 'setup',
 						title: 'Provider setup',
 					},

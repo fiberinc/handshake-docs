@@ -3,6 +3,7 @@
 //
 // You'll want to use this via the Makefile.
 
+import lodash, { mapValues } from 'lodash';
 import assert from 'assert';
 import chalk from 'chalk';
 import fs from 'fs';
@@ -24,12 +25,8 @@ function extractClasses(docs: any) {
 		isFromNextAuth: boolean;
 		takesSubdomainArg: boolean;
 		// logo: string;
+		blockTagsByName: Record<string, string | null>;
 		docsUrl: string | null;
-		troubleshoot: string | null;
-		usage: string | null;
-		configuration: string | null;
-		setup: string | null;
-		summary: string | null;
 	}[] = [];
 
 	// Traverse the JSON structure to find and format class documentation
@@ -111,6 +108,20 @@ function extractClasses(docs: any) {
 				return content.replace(/\/?DOC_IMAGES/g, DOCS_IMAGES_ABS_PATH);
 			}
 
+			const EXPECTED_BLOCK_TAGS = [
+				'title',
+				'redirect',
+				'options',
+				'troubleshoot',
+				'providersetup',
+				'reference',
+			];
+			for (const tag in blockTagsByName) {
+				if (!EXPECTED_BLOCK_TAGS.includes(tag)) {
+					throw Error(`provider ${name} has unexpected docustring tag ${tag}`);
+				}
+			}
+
 			result.push({
 				id: providerId,
 				objectName: item.name,
@@ -122,18 +133,10 @@ function extractClasses(docs: any) {
 					'subdomain'
 				),
 				// logo,
+				blockTagsByName: mapValues(blockTagsByName, (body) =>
+					replaceImageRoot(joinParsedContent(body ?? []))
+				),
 				docsUrl: joinParsedContent(blockTagsByName.reference ?? []),
-				configuration: replaceImageRoot(
-					joinParsedContent(blockTagsByName.configuration ?? [])
-				),
-				usage: replaceImageRoot(joinParsedContent(blockTagsByName.usage ?? [])),
-				setup: replaceImageRoot(joinParsedContent(blockTagsByName.setup ?? [])),
-				troubleshoot: replaceImageRoot(
-					joinParsedContent(blockTagsByName.troubleshoot ?? [])
-				),
-				summary: replaceImageRoot(
-					joinParsedContent(item.signatures[0].comment?.summary)
-				),
 			});
 		} catch (e) {
 			console.log('failed for item', item);

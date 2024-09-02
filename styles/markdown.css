@@ -7,7 +7,14 @@
 		color: rgb(var(--text-contrast));
 		width: fit-content;
 		margin: auto;
-		margin-top: -20px;
+		/* margin-top: -20px; */
+		margin-top: 10px;
+	}
+
+	img {
+		max-height: 800px;
+		border: 1px solid var(--border-primary);
+		margin: auto;
 	}
 
 	code[data-line-numbers-max-digits='2'] > [data-line]::before {
@@ -31,8 +38,8 @@
 		}
 
 		figcaption {
-			/* border-top-right-radius: 5px;
-			border-top-left-radius: 5px; */
+			border-top-right-radius: 5px;
+			border-top-left-radius: 5px;
 			background: var(--background-primary);
 			font-size: 13px;
 			/* margin-top: 0; */
@@ -42,7 +49,7 @@
 			justify-content: center;
 			color: rgb(var(--text-contrast));
 			background: rgb(var(--bg-foreground));
-			/* border: 1px solid var(--border-primary); */
+			border: 1px solid var(--border-primary);
 		}
 	}
 
