@@ -43,7 +43,7 @@ const config: Config = {
 			fontSize: {
 				xs: '13px',
 				sm: '14px',
-				base: '15px',
+				md: '15px',
 				lg: '18px',
 				'3xl': '28px',
 				'4xl': '35px',
