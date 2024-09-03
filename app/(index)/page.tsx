@@ -6,7 +6,7 @@ import { getProviders } from '~/lib/providers';
 import { REPO_URL } from '~/lib/routes';
 import { Banner } from '~/ui/Banner';
 import { GitCloneCopyButton } from '~/ui/GitCloneCopyButton';
-import { GithubLogoMark } from '~/ui/GithubLogoMark';
+import { GitHubLogo } from '~/ui/GitHubLogo';
 import { Text } from '~/ui/Text';
 import { WistiaPlayer } from '~/ui/WistiaPlayer';
 import { ProviderGrid } from './ProviderGrid';
@@ -36,7 +36,7 @@ export default async function Page() {
 				>
 					Obtain access tokens to 200+ services
 				</h1>
-				<Text className="text-contrast text-md mb-4 antialiased md:text-2xl">
+				<Text className="text-contrast text-base mb-4 antialiased md:text-2xl md:text-balance">
 					{/* Handshake is an OAuth handler that gets you access tokens to your
           users&apos; accounts in dozens of popular apps and APIs */}
 					Handshake handles OAuth flows with popular tools and gets you access
@@ -50,8 +50,8 @@ export default async function Page() {
 							'rounded-md border bg-white px-5 text-black '
 						)}
 					>
-						<GithubLogoMark size={25} />{' '}
-						<Text className="text-lg font-medium">Star on Github</Text>
+						<GitHubLogo size={25} />{' '}
+						<Text className="text-lg font-medium">Star on GitHub</Text>
 					</a>
 
 					<a
@@ -75,7 +75,9 @@ export default async function Page() {
 						<Text variant="h2" className="mb-3">
 							Demo
 						</Text>
-						<Text>See Handshake in action handling a Github OAuth flow:</Text>
+						<Text className="text-lg">
+							See Handshake in action handling a GitHub OAuth flow:
+						</Text>
 					</div>
 					<WistiaPlayer />
 				</section>
@@ -84,7 +86,7 @@ export default async function Page() {
 						<Text variant="h2" className="mb-3">
 							Getting started
 						</Text>
-						<Text>Clone our repo to get started. </Text>
+						<Text className="text-lg">Clone our repo to get started. </Text>
 					</div>
 
 					<div className="bg-foreground text-contrast flex flex-col gap-4 rounded-md p-5">
@@ -98,7 +100,7 @@ export default async function Page() {
 							</div>
 						</code>
 					</div>
-					<Text>
+					<Text className="text-lg">
 						Then follow the instructions in{' '}
 						<a href={REPO_URL} className="hover:text-link">
 							our README.
@@ -110,12 +112,12 @@ export default async function Page() {
 						<Text variant="h2" className="mb-3">
 							Supported Providers
 						</Text>
-						<Text>Click to read documentation:</Text>
+						<Text className="text-lg">Click to read documentation:</Text>
 					</div>
 					<ul className="flex flex-row flex-wrap gap-2">
 						<ProviderGrid infos={infos} />
 					</ul>
-					<Text>
+					<Text className="text-lg">
 						Can&apos;t find a provider? Let us know by{' '}
 						<a
 							href={REPO_URL + '/issues'}

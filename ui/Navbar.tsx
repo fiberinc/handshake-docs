@@ -31,10 +31,10 @@ export function Navbar() {
 					<a
 						href={REPO_URL}
 						target="_blank"
-						className="text-contrast font-medium flex gap-2 items-center"
+						className="text-contrast flex gap-2 items-center"
 					>
 						<GitHubLogoIcon className="w-5 h-5" />
-						Github
+						GitHub
 					</a>
 				</div>
 			</div>

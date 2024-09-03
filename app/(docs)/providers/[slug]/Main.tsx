@@ -127,7 +127,7 @@ export async function Main({ provider }: Props) {
 								: `making ${provider.title} work`}
 							?{' '}
 							<a href={REPO_URL + '/issues'} target="_blank">
-								Open an issue on Github
+								Open an issue on GitHub
 							</a>{' '}
 							to get help.
 						</p>
