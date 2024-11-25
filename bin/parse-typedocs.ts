@@ -67,12 +67,19 @@ function extractClasses(docs: any) {
 
 			// const from = require('')[itemName]
 
+			if (typeof handshake[item.name] !== 'function') {
+				throw Error(`unexpected ${item.name}`);
+			}
+
 			const fromHandshake = handshake[item.name]({
 				clientId: 'asdf',
 				clientSecret: 'asdf',
 				issuer: 'asdf',
 				subdomain: 'asdf',
 				scopes: ['asdf'],
+				// Discogs
+				consumerKey: 'asdf',
+				consumerSecret: 'asdf',
 			}).provider;
 			const providerId = fromHandshake.id;
 			assert(providerId);

@@ -7,7 +7,6 @@ Landing page and documentation for Handshake.
 Install dependencies:
 
 ```bash
-cd docs
 pnpm i
 ```
 

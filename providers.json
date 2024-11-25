@@ -448,10 +448,14 @@
     "id": "discogs",
     "objectName": "Discogs",
     "title": "Discogs",
-    "website": "https://www.discogs.com",
+    "website": "https://discogs.com",
     "isFromNextAuth": false,
     "takesSubdomainArg": false,
-    "blockTagsByName": {},
+    "blockTagsByName": {
+      "options": "```ts title=\"app/options.ts\"\nimport { Discogs } from \"handshake\";\n\nDiscogs({\n  consumerKey: string,\n  consumerSecret: string,\n});\n```",
+      "providersetup": "",
+      "troubleshoot": ""
+    },
     "docsUrl": ""
   },
   {
@@ -1212,6 +1216,20 @@
     "docsUrl": ""
   },
   {
+    "id": "microsoft-entra-id",
+    "objectName": "MicrosoftEntra",
+    "title": "Microsoft Entra ID",
+    "website": "https://entra.microsoft.com",
+    "isFromNextAuth": false,
+    "takesSubdomainArg": false,
+    "blockTagsByName": {
+      "reference": "https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow",
+      "options": "```ts title=\"app/options.ts\"\nimport { Entra } from \"handshake\";\n\nEntra({\n  clientId: string,\n  clientSecret: string,\n  scopes: [\n    \"openid\",\n    \"https://graph.microsoft.com/User.Read\",\n    \"https://graph.microsoft.com/Mail.Send\",\n  ],\n});\n```",
+      "providersetup": "## Configure the Redirect URI\n\nEnsure your app is configured in the Azure portal under \n`Authentication`\n with\nthe following redirect URI:\n\n\n`https://YOUR_APP_URL/auth/microsoft-entra-id/callback`"
+    },
+    "docsUrl": "https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow"
+  },
+  {
     "id": "live",
     "objectName": "MicrosoftLive",
     "title": "Microsoft Live",
@@ -1588,7 +1606,7 @@
     "takesSubdomainArg": false,
     "blockTagsByName": {
       "redirect": "For Shopify, you must include an \n`extras.shop`\n parameter to identify the shop\nthat you're trying to take through the OAuth flow. The final URL might look\nsomething like this:\n\n\n```bash\nhttps://YOUR_HANDSHAKE_INSTANCE_URL/auth/shopify/redirect?\n  state=12345\n  &extras.shop=example.myshopify.com\n  &callback_uri=http://YOUR_APP_URL/shopify-integration/done # example\n```",
-      "options": "```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Shopify } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Shopify({\n      clientId: process.env.SHOPIFY_CLIENT_ID!,\n      clientSecret: process.env.SHOPIFY_CLIENT_SECRET!,\n      scopes: [\"read_orders\", \"read_products\"],\n    }),\n  ],\n};\n\n// ...\n```",
+      "options": "```ts title=\"app/options.ts\"\nimport { HandshakeOptions, Shopify } from \"handshake\";\n\nconst options: HandshakeOptions = {\n  handles: [\n    Shopify({\n      clientId: process.env.SHOPIFY_CLIENT_ID!,\n      clientSecret: process.env.SHOPIFY_CLIENT_SECRET!,\n      scopes: [\"read_orders\", \"read_products\"],\n    }),\n  ],\n};\n```",
       "providersetup": "The \n`clientId`\n and \n`clientSecret`\n arguments to the \n`Shopify()`\n handler come\nfrom your Shopify app.\n\n## 1. Create a Shopify app\n\nYou must have a Shopify app to take users through the OAuth flow. Check out\nthis [in-depth tutorial on how authentication works in the Shopify\necosystem](https://fiber.dev/blog/shopify-oauth-guide).\n\nWithin your app, you'll find the client ID and secret:\n\n![Find client ID and secret in the admin of your Shopify\napp.](/images/docs/shopify/app-keys.png)\n\n## 2. Configure the Callback URL\n\nMake sure your Handshake URL is allowed within your Shopify app's\nConfiguration tab:\n\n![](/images/docs/shopify/app-redirect.png)\n\nFollow the format: \n`https://HANDSHAKE_URL/auth/shopify/callback`",
       "troubleshoot": "### \"The redirect_uri is not whitelisted\"\n\nIf you see this, the Handshake callback URL you asked Shopify to send users\nback to wasn't added to the list of allowed URLs in your Shopify app\nsettings.\n\n![Shopify error page saying \"The redirect_uri is not\nwhitelisted\"](/images/docs/shopify/trouble-unauthorized-redirect.png)"
     },

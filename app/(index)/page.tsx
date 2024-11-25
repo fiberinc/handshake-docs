@@ -21,9 +21,9 @@ export default async function Page() {
 	return (
 		<div className="m-auto flex flex-col gap-16 w-full ">
 			<header className="flex flex-col gap-3">
-				<Link href="/providers/#stripe" className="w-fit">
+				<Link href="/providers/#microsoft-entra-id" className="w-fit">
 					<Banner>
-						<span className="mr-2">🎉</span>New Faire provider
+						<span className="mr-2">🎉</span>New Microsoft Entra ID provider
 						<span className="text-default ml-2 opacity-60">&rarr;</span>&nbsp;
 					</Banner>
 				</Link>
